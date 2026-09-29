@@ -9,4 +9,4 @@
 
 2. Click <kbd>Run workflow</kbd>
 
-3. Click ![Run workflow](https://shields.io)
+3. In the dropdown, click the green <kbd>Run workflow</kbd>
