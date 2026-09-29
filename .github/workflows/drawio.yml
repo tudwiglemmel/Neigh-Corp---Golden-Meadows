@@ -1,21 +1,26 @@
 name: Export draw.io
+
 on:
   push:
-    paths: ['**/*.drawio']
+    paths:
+      - '**/*.drawio'
 
 jobs:
   export:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: rlespinasse/drawio-export-action@v2
         with:
-          format: pdf        # or svg, but pdf is more reliable in LaTeX
-          path: figures      # folder containing your .drawio files
-          output: exported   # where the per-page files go
+          format: pdf
+          path: figures
+          output: exported
           transparent: false
 
       - uses: stefanzweifel/git-auto-commit-action@v5
