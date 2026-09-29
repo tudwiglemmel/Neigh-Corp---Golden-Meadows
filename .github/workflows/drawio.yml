@@ -20,8 +20,8 @@ jobs:
             grep -q "<mxfile" "media/$2" || { echo "$2 is not a draw.io file (check sharing settings)"; exit 1; }
           }
           download 1-6c25OSk3wUBW-XKGcHbhOUyIvkk69ut IS1_Project_VDML.drawio
-          download 1ondUSZTKFug9XV9pIMQDr_u0hKzc-j1q IS1_Goal_model.drawio
-          download 1-j006A3rryGp3coW_dueU5omBixdOlJ5 IS1_REA.drawio
+          download 1ondUSZTKFug9XV9pIMQDr_u0hKzc-j1q IS1_Project_Goal_model.drawio
+          download 1-j006A3rryGp3coW_dueU5omBixdOlJ5 IS1_Project_REA.drawio
             
       - uses: rlespinasse/drawio-export-action@v2
         with:
