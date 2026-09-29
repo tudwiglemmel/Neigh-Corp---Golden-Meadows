@@ -19,7 +19,7 @@ jobs:
       - uses: rlespinasse/drawio-export-action@v2
         with:
           format: pdf
-          path: figures
+          path: media
           output: exported
           transparent: false
 
