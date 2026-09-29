@@ -1086,9 +1086,6 @@
         <mxCell id="lWLnzh-pzcRLIOBtipLZ-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Isurances VP" vertex="1">
           <mxGeometry height="30" width="80" x="1252" y="-720.94" as="geometry" />
         </mxCell>
-        <mxCell id="U6Nq4B-DlDGghs8WzBR9-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="test" vertex="1">
-          <mxGeometry height="30" width="60" x="120" y="-900" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
