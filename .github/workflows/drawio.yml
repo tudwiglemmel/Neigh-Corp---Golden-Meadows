@@ -1,16 +1,13 @@
 name: Export draw.io
-
 on:
   push:
-    paths:
-      - '**/*.drawio'
+    paths: ['media/**/*.drawio']
 
 jobs:
   export:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,10 +17,11 @@ jobs:
         with:
           format: pdf
           path: media
-          output: exported
+          output: ../figures
+          action-mode: all
           transparent: false
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-export draw.io figures"
-          file_pattern: exported/*
+          file_pattern: "figures/*.pdf"
