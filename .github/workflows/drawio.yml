@@ -30,6 +30,8 @@ jobs:
           output: ../figures
           action-mode: all
           transparent: false
+          crop: true
+          border: 0
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
