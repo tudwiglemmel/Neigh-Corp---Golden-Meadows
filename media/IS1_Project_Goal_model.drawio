@@ -119,8 +119,8 @@
         <mxCell id="GIrfZZpm4kRP1ZzzYtow-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=light-dark(#EDEDED,#EDEDED);fontSize=12;" value="Goal &lt;font style=&quot;font-size: 16px;&quot;&gt;5&lt;/font&gt;: To get many horse-interested users to play Golden Meadows" vertex="1">
           <mxGeometry height="86" width="120" x="2056.2799999999997" y="1249.5" as="geometry" />
         </mxCell>
-        <mxCell id="GIrfZZpm4kRP1ZzzYtow-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=12;fontColor=#000000;" value="Influencer 16: There is one (1) established competitor game" vertex="1">
-          <mxGeometry height="60" width="120" x="1978" y="1395.5" as="geometry" />
+        <mxCell id="GIrfZZpm4kRP1ZzzYtow-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=12;fontColor=#000000;" value="Influencer 16: There is one (1) established competitor game with high market share and high cost of switching" vertex="1">
+          <mxGeometry height="94.5" width="130" x="1960" y="1385.5" as="geometry" />
         </mxCell>
         <mxCell id="GIrfZZpm4kRP1ZzzYtow-45" edge="1" parent="1" source="GIrfZZpm4kRP1ZzzYtow-44" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=6;endSize=6;fontColor=light-dark(#000000,#EDEDED);" target="GIrfZZpm4kRP1ZzzYtow-39" value="oportunity/threat">
           <mxGeometry relative="1" as="geometry" />
@@ -225,8 +225,8 @@
         <mxCell id="GIrfZZpm4kRP1ZzzYtow-78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=12;fontColor=#000000;" value="Influencer 12: The employees morality can stop profit-focused implementations" vertex="1">
           <mxGeometry height="80" width="110.5" x="1348" y="975.5" as="geometry" />
         </mxCell>
-        <mxCell id="GIrfZZpm4kRP1ZzzYtow-79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=12;fontColor=#000000;" value="Influencer 15: Parents are concerned about addiction" vertex="1">
-          <mxGeometry height="60" width="120" x="2128" y="1395.5" as="geometry" />
+        <mxCell id="GIrfZZpm4kRP1ZzzYtow-79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=12;fontColor=#000000;" value="Influencer 15:&amp;nbsp;Parents control purchasing decisions for younger players and are concerned about addiction/microtransactions" vertex="1">
+          <mxGeometry height="110" width="140" x="2128" y="1395.5" as="geometry" />
         </mxCell>
         <mxCell id="Ohqdel-BvbngqG1ryLQ9-6" edge="1" parent="1" source="Ohqdel-BvbngqG1ryLQ9-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontSize=12;fontColor=light-dark(#000000,#EDEDED);" target="R25JusztQ5W7IT3c3uHb-4" value="threat">
           <mxGeometry relative="1" as="geometry" />
