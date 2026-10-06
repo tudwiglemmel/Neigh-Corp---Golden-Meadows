@@ -223,9 +223,13 @@ A number of goals and means are in place to combat this force. Means 26 is about
 
 Goal 9, establishing a strongly recognizable brand also combats this through establishing Golden Meadows individual identity. While competitors can copy graphics, the means that go into this goal, such as collaborating with real-life horse related brands and hiring influencers, are harder to replicate. These means and goals relate to the VDML Game influencers and actor that provide Neigh Crop with excitement for game content and updates.
 
-inf 16 and inf 14, goal 9 and 2 more
+% inf 16 and inf 14, goal 9 and 2 more
 
-\textbf{Bargaining Power of Buyers}
+\textbf{Bargaining Power of Buyers:}
+This force measures how much power the buyers have. The influencers in the goal model that show weakness in this force are influencer 11 and 14, which state that the target group is easily convinced to pay and gamble. The factors that strengthen this force are influencer 15 and 21, which state 
+
+Influencer 11 which states that the target groups are easily convinced to gamble and 13 which states that the target group is easily convinced to pay weaken this force, as the target demographic is less protected. In the buyers favour however are influencers 15 and 21, which describe how the parents control the purchasing decision of many young players and that pop-up ads can decrease game enjoyment. 
+
 inf 11, 13, 15, 21
 
 \textbf{Bargaining Power of Suppliers}
@@ -445,7 +449,13 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 
     \item \textbf{High-quality Game Content Conversion Process}
 
-    Three economic events participate in this conversion process. The first decrement event, \textit{Selling Merch}, 
+    Three economic events participate in this conversion process. The first decrement event, \textit{Selling Merch}, consumes the \textit{Merch} resource produced in the earlier conversion process in a 1..* to 0..* relationship, meaning that if merchandise is being sold, at least one unit of merchandise must actually be consumed in the process, though not limited to one. Merchandise itself does not necessarily have to be in the process of being sold, and it can be sold by multiple \textit{Selling Merch} events given that more copies can be theoretically made.
+
+    Moving on, the \textit{Publishing Game content} decrement \textbf{uses} the \textit{High-Quality Game Content} produced in the previous process, the multiplicities being 1..* to 0..*. This implies that at least one unit of high-quality game content must be used by the event, as its very name suggests, though there is no set limit. Meanwhile, \textit{High-Quality Game Content} can exist as a unit without having to be actively used, hence the 0..* on the right side.
+
+    The last economic event is \textit{Publishing Social Media Content} which consumes the \textit{Social Media Content}, the reasoning being that once a social media post is made public, publishing it again will be redundant, as it will have already used up its value as a form of advertisement. The multiplicities between the resource and the event are 1..* to 0..*, using roughly the same logic as in the previous resource-event relationship (the event name implies at least one resource has to be used for the event to occur, and the resource can exist without being engaged in the event). 
+
+    The three events are converted into the \textit{Awareness Acquisition} increment event, which, finally, produces \textbf{Brand Awareness}, representing how well-known Neigh Corp's company name is, as well as the game itself. 
         
 
     
@@ -473,11 +483,32 @@ Neigh Corp - Insurance Company (Rights to claim insurance)
 Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams.
 
 \subsubsection{Sales Process}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_EPC_Model-Sales-Process.pdf}
+        \caption{Conversion processes \textit{Neigh Corp}}
+        \label{fig:Sales_process}
+    \end{figure}
+\end{center}
+
 Involved in the Sales Process are the organisational units Marketing, Sales, Player, Billing, Payment Provider, Shop System, and the ERP System.
 
 DESCRIPTION
 
 \subsubsection{Procurement Process}
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_EPC_Model-Procurement-Process.pdf}
+        \caption{Conversion processes \textit{Neigh Corp}}
+        \label{fig:Sales_process}
+    \end{figure}
+\end{center}
+
 In the Procurement Process, the organisational units Procurement, ERP System, Manager, Office, and Finance are involved.
 
 The process starts when the company identifies a need to purchase goods or services. The Procurement department creates an internal purchase request, which is then registered. The ERP system checks the value of the request. If the value exceeds SEK 50,000, a manager reviews the request and either approves or rejects it. Requests of SEK 50,000 or less continue without managerial approval.
@@ -485,9 +516,20 @@ Approved requests and requests that do not require approval are released for pur
 
 After the supplier is selected, the Procurement department creates a purchase order and negotiates the payment terms with the supplier. If the terms are agreed without prepayment, the order is sent to the supplier. If the supplier requires prepayment, a manager must approve it. If approved, the Finance department pays the prepayment, and Procurement then sends the purchase order to the supplier. If the manager rejects the prepayment, Procurement cancels the purchase order and the process ends.
 
-After the purchase order is sent, the Office receives the goods or services and registers the goods receipt. In parallel, the ERP system receives the invoice. Both steps must be completed before the process continues.The Finance department then compares the purchase order, the goods receipt and the invoice through a three-way match. If they match, Finance settles the invoice. If they do not match, the Procurement department rejects the invoice and notifies the supplier.
+After the purchase order is sent, the Office receives the goods or services and registers the goods receipt. In parallel, the ERP system receives the invoice. Both steps must be completed before the process continues. The Finance department then compares the purchase order, the goods receipt and the invoice through a three-way match. If they match, Finance settles the invoice. If they do not match, the Procurement department rejects the invoice and notifies the supplier.
 
 \subsubsection{Hiring Process}
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_EPC_Model-Hiring-Process.pdf}
+        \caption{Conversion processes \textit{Neigh Corp}}
+        \label{fig:Sales_process}
+    \end{figure}
+\end{center}
+
+
 In the Hiring Process, the involved organisational units are HR, Manager, and IT.
 
 When a need for staff is identified, the Hiring Process begins. A manager creates a staffing request which is being reviewed by HR. If they do not approve, the manager is notified and the request will be closed. If they approve, they create a job posting with the manager that they publish. Then, the applications will be collected and screened by HR. The manager shortlists the candidates and HR schedules interviews. The manager conducts interviews and evaluates the candidates. If there are no fitting candidates to select, HR closes the recruitment. If one candidate get selected, HR prepares a job offer, sends it to the candidate and HR and the manager wait for an answer. If the candidate declines the offer, the manager decides whether to close the recruitment if no other candidate should be selected, or if the job should be offered and sent out to another candidate.
