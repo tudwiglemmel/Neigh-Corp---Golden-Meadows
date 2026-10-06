@@ -608,7 +608,7 @@
         <mxCell id="72zjLzx_ZmpvdvfOHDBE-55" edge="1" parent="1" source="72zjLzx_ZmpvdvfOHDBE-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="72zjLzx_ZmpvdvfOHDBE-50">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="72zjLzx_ZmpvdvfOHDBE-49" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Store opend" vertex="1">
+        <mxCell id="72zjLzx_ZmpvdvfOHDBE-49" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Store opened" vertex="1">
           <mxGeometry height="40" width="120" x="260" y="-1030" as="geometry" />
         </mxCell>
         <mxCell id="72zjLzx_ZmpvdvfOHDBE-56" edge="1" parent="1" source="72zjLzx_ZmpvdvfOHDBE-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="72zjLzx_ZmpvdvfOHDBE-42">
@@ -2368,7 +2368,7 @@
         <mxCell id="U8Ade3alRrMWCWsW0bdN-5" edge="1" parent="1" source="GFDHQVJnM6KfxLJ_PLFb-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=none;endFill=0;fillColor=#fff2cc;strokeColor=#d6b656;" target="U8Ade3alRrMWCWsW0bdN-3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="230" y="1870" />
+              <mxPoint x="200" y="1870" />
             </Array>
             <mxPoint x="10" y="1840" as="sourcePoint" />
           </mxGeometry>
