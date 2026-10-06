@@ -7,6 +7,8 @@
 \usepackage{svg}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{references.bib} %Import the bibliography file
 
 \title{Neigh Corp - Golden Meadows}
 \author{Marlen Baumgart \and Rodions Busurovs \and Carmen Silberbach \and  Martin Kashapov \and  Ludwig Temmel \and  Ilyas Yildirim}
@@ -205,11 +207,14 @@ This section is to show the goals of the company. The goals shall be clearly rel
 \end{figure}
 
 \subsection{Goal Model Explained}
-Include a textual description of the BMM model that explains it and shows how it is related to the components of the five forces model
+Include a textual description of the BMM model that explains it and shows how it is related to the components of the five forces model.
 
-\autoref{fig:Goal model} shows the 
+\autoref{fig:Goal model} shows the goal model for Neigh-corp. It describes the overarching goals, subgoals, influencers that affect these goals and the means that can help achieve them. The diagram is structured in accordance with \cite{kaplan2004strategy} where each swimlane represents a dimension of value creation in the company. The lowest level, named "Learning \& Growth" contains the technologies used in the company. This level supports "Internal Business Processes" which lists the methods and processes the company uses to create value. The "Customer" perspective contains the most elements and describes how these processes create value for the customer, and the final "Financial" level shows how all these elements combine to fulfill the most important monetary goals in the company such as profit recurring revenue.
 
+Influencers are modelled outside any perspective, as these can span several and are not influenced by the company 
 
+The goal model was created with the previously shown \autoref{fig:VDML} diagram in mind and in accordance with Porters five forces \cite{quickmba_porter} and Porters generic strategies. %\cite{wikipedia_porter_generic_strategies}.
+Below is a breakdown of key elements and to which of Porters five forces and Generic strategies these are related aswell as the reasoning behind their swimlane placement.
 
 - Goal 9 is connected to the force Degree of Rivalry (but also 2 more)
 - 
@@ -385,7 +390,15 @@ This section is to show the processes of the company. The processes shall be cle
 Include a graphical conceptual schema of the company with exchange and conversion processes (expressed as UML class diagrams) using the REA ontology. All classes, including attributes, must be named, and the cardinality/multiplicity between the classes must be expressed. Types for all classes shall be specified in accordance with REA. Note that only the exchange and conversion processes within the company shall be modelled, but not processes in other companies in the value network. The conceptual schema shall also make use of other relevant patterns than those for exchange and conversion processes, i.e. structural and behavioural patterns as defined in the book by Hruby. Provide textual descriptions for explaining the graphical schema.
 
 \subsection{Detailed Processes in EPC}
-Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams.
+Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams. \\
+
+The process starts when the company identifies a need to purchase goods or services. The Procurement department creates an internal purchase request, which is then registered. The ERP system checks the value of the request. If the value exceeds SEK 50,000, a manager reviews the request and either approves or rejects it. Requests of SEK 50,000 or less continue without managerial approval.
+Approved requests and requests that do not require approval are released for purchasing. The Procurement department then selects a supplier. If the manager rejects the request, the ERP system notifies the requester and the case is closed.
+
+After the supplier is selected, the Procurement department creates a purchase order and negotiates the payment terms with the supplier. If the terms are agreed without prepayment, the order is sent to the supplier. If the supplier requires prepayment, a manager must approve it. If approved, the Finance department pays the prepayment, and Procurement then sends the purchase order to the supplier. If the manager rejects the prepayment, Procurement cancels the purchase order and the process ends.
+
+After the purchase order is sent, the Office receives the goods or services and registers the goods receipt. In parallel, the ERP system receives the invoice. Both steps must be completed before the process continues.The Finance department then compares the purchase order, the goods receipt and the invoice through a three-way match. If they match, Finance settles the invoice. If they do not match, the Procurement department rejects the invoice and notifies the supplier.
+
 
 \subsection{Relationships between Models}
 Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
@@ -414,10 +427,7 @@ In other parts of the work, you have designed the organization from several pers
 
 
 
-
-
-
-
+\printbibliography
    
 
 
