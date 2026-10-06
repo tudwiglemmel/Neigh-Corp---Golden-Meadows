@@ -6,8 +6,8 @@
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage{float}
-\usepackage{hyperref}
 \usepackage{biblatex} %Imports biblatex package
+\usepackage[hidelinks]{hyperref}
 \addbibresource{references.bib} %Import the bibliography file
 
 \title{Neigh Corp - Golden Meadows}
@@ -52,15 +52,15 @@ This section is to show the value network in which the company will work. Agents
     \hspace*{-4cm}
     \includegraphics[width=1.6\linewidth]{figures/IS1_Project_VDML-Diagram.pdf}
     \caption{VDML Diagram of \textit{Neigh Corp}}
-    \label{fig:VDML}
+    \label{fig:VDML_diagram}
 \end{figure}
 
 \subsection{VDML Diagram}
 \begin{figure}[H]
     \hspace*{-4cm}
     \includegraphics[width=1.6\linewidth]{figures/IS1_Project_VDML-Descriptions.pdf}
-    \caption{VDML Diagram of \textit{Neigh Corp}}
-    \label{fig:VDML}
+    \caption{VDML Descriptions of \textit{Neigh Corp}}
+    \label{fig:VDML_description}
 \end{figure}
 
 
@@ -203,24 +203,27 @@ This section is to show the goals of the company. The goals shall be clearly rel
     \hspace*{-4cm}
     \includegraphics[width=1.6\linewidth]{figures/IS1_Project_Goal_model-Page-1.pdf}
     \caption{Goal model for \textit{Neigh Corp}}
-    \label{fig:Goal model}
+    \label{fig:Goal_model}
 \end{figure}
 
 \subsection{Goal Model Explained}
-Include a textual description of the BMM model that explains it and shows how it is related to the components of the five forces model.
+% Include a textual description of the BMM model that explains it and shows how it is related to the components of the five forces model.
 
-\autoref{fig:Goal model} shows the goal model for Neigh-corp. It describes the overarching goals, subgoals, influencers that affect these goals and the means that can help achieve them. The diagram is structured in accordance with \cite{kaplan2004strategy} where each swimlane represents a dimension of value creation in the company. The lowest level, named "Learning \& Growth" contains the technologies used in the company. This level supports "Internal Business Processes" which lists the methods and processes the company uses to create value. The "Customer" perspective contains the most elements and describes how these processes create value for the customer, and the final "Financial" level shows how all these elements combine to fulfill the most important monetary goals in the company such as profit recurring revenue.
+\autoref{fig:Goal_model} shows the goal model for Neigh-corp. It describes the overarching goals, subgoals, influencers that affect these goals and the means that can help achieve them. The coloured border around the boxes in the diagram indicate which dimension of value creation in the company these belong to, in accordance with \cite{kaplan2004strategy}. Which colour corresponds to which level is shown in the diagram next to the legend. The levels shown in the diagram are ordered in accordance with the levels in the generic strategies, ranging from financial goals at the top to concrete technologies at the bottom. Influencers are modelled outside any perspective, as these can impact across several categories and are not influenced by the company.
 
-Influencers are modelled outside any perspective, as these can span several and are not influenced by the company 
+The first level, named "Learning \& Growth" contains the technologies used in the company. This level supports the one above it, "Internal Business Processes" which lists the methods and processes the company uses to create value. The "Customer" perspective contains the most elements and describes how these processes create value for the customer, and the final "Financial" level shows how all these elements combine to fulfil the most important monetary goals in the company such as profit and recurring revenue.
 
-The goal model was created with the previously shown \autoref{fig:VDML} diagram in mind and in accordance with Porters five forces \cite{quickmba_porter} and Porters generic strategies. %\cite{wikipedia_porter_generic_strategies}.
-Below is a breakdown of key elements and to which of Porters five forces and Generic strategies these are related aswell as the reasoning behind their swimlane placement.
+The goal model was created with the previously shown \autoref{fig:VDML_diagram} diagram in mind and in accordance with Porters five forces \cite{quickmba_porter} and Porters generic strategies. %\cite{wikipedia_porter_generic_strategies}.
+Each of porters five forces are listed below with an analysis of which parts of the diagram belong to it, which Generic strategy is used to combat its force and the reasoning behind their Strategy maps classification.  The overarching approach for Golden Meadows is differentiation, as the target customer group for this game is rather niche.\\
 
-- Goal 9 is connected to the force Degree of Rivalry (but also 2 more)
-- 
+\textbf{Competitive rivalry:}
+This force measures how many competing products there are on the market. A large number of competitors results in a greater force. Influencers 14 and 16 measure this force. They indicate that there is increasing competition from Chinese gaming companies and that there is one established competitor with high market share and high cost of switching. This makes the competitive rivalry force comparatively strong, since the potential for new competitors emerging has increased, and potential customers experience a high cost of switching to Golden Meadows. 
 
-\textbf{Competitive rivalry}
-inf 16 and inf 14
+A number of goals and means are in place to combat this force. Means 26 is about making Golden Meadows free to play, as shown in the VDML \autoref{fig:VDML_diagram}. This makes the game accessible to new users at no cost and therefore lowers upfront switching cost to zero.
+
+Goal 9, establishing a strongly recognizable brand also combats this through establishing Golden Meadows individual identity. While competitors can copy graphics, the means that go into this goal, such as collaborating with real-life horse related brands and hiring influencers, are harder to replicate. These means and goals relate to the VDML Game influencers and actor that provide Neigh Crop with excitement for game content and updates.
+
+inf 16 and inf 14, goal 9 and 2 more
 
 \textbf{Bargaining Power of Buyers}
 inf 11, 13, 15, 21
@@ -388,18 +391,94 @@ This section is to show the processes of the company. The processes shall be cle
 
 \subsection{Exchange and Conversion Processes in REA}
 \subsubsection{Conversion Processes}
+\begin{center}
 \begin{landscape}
     \begin{figure}[H]
-    \includegraphics[width=0.9\linewidth]{figures/IS1_Project_REA-Conversion-Process.pdf}
-        \caption{Goal model for \textit{Neigh Corp}}
-        \label{fig:Goal model}
+    \includegraphics[width=1.3\linewidth]{figures/IS1_Project_REA-Conversion.pdf}
+        \caption{Conversion processes \textit{Neigh Corp}}
+        \label{fig:Conversion_process}
     \end{figure}
 \end{landscape}
+\end{center}
 
-Include a graphical conceptual schema of the company with exchange and conversion processes (expressed as UML class diagrams) using the REA ontology. All classes, including attributes, must be named, and the cardinality/multiplicity between the classes must be expressed. Types for all classes shall be specified in accordance with REA. Note that only the exchange and conversion processes within the company shall be modelled, but not processes in other companies in the value network. The conceptual schema shall also make use of other relevant patterns than those for exchange and conversion processes, i.e. structural and behavioural patterns as defined in the book by Hruby. Provide textual descriptions for explaining the graphical schema.
+Seen above is the diagram depicting every conversion process Neigh Corp is involved in. The conversion processes included are as follows:
+
+\begin{enumerate}
+    \item \textbf{Merch Design Conversion Process}
+    
+    
+        The economic event \textit{Designing motifs} decrements the \textit{Labour Service} resource with a 1..1 to 0..* multiplicity, meaning that one and only one labour service, representing the act of employees working, can simultaneously be engaged in many motif designs, or as few as zero. The resource is \textbf{consumed}.
+        
+        \textit{Working with Software} decrements \text{software} in a \textbf{use} relationship, i.e., the software is not permanently destroyed in the process and can be used again in future processes. The software may be used by zero or many of these events, and the event itself may be using one or many software resources, as the event name itself implies at least one software resource has to be used.
+    
+        Lastly, the event \textit{Using assets in design} decrements \textit{Licenses} - the resource representing licenses that may be necessary to acquire in order to use certain design elements (assets, as the event name implies). Zero or many licenses may be necessary as there is no guarantee copyrighted material will be used. For that reason, licenses are also engaged in zero-to-many of these events, as they may or may not be used by many asset design use events.
+    
+        Finally, each event is engaged in a one-to-many relationship with the conversion process, as each of the events may need to occur multiple times to finalise a merchandise design. The events are converted into the \textit{Merch Design Acquisition} increment event, which produces the final \textbf{Merch Design} resource.
+
+    \item \textbf{Character Design Conversion Process}
+
+
+        The same two resources described in the previous process are engaged in this conversion process as well, using identical multiplicities, with the exception of \textit{software}.
+    
+        \textit{Labour Service} is consumed in a 1..1 to 0..* relationship with both the \textit{Designing Textures} and \textit{Designing Animations} decrement events. The labour service, i.e. the employees, may not necessarily be engaged in either of these events, hence the multiplicity of 0..*, but if these events are taking place, labour service must always be consumed by both of them. The \textit{Working with software} decrement event takes place once again, engaged in the same \textbf{use} relationship with \textit{software} as before. The three decrement events are converted into the \textit{Creating Character Design} increment event, which produces \textbf{Character Design}.
+
+    \item \textbf{Merch Conversion Process}
+
+        The corresponding decrement events of the process are as follows:
+
+        \textit{Designing Articles} - the event consumes \textit{Labour Service} in a 1..1 to 0..* relationship, the multiplicity reasoning being identical to what was discussed in the previous conversion processes regarding said resource. 
+        
+        The \textit{Merch Design} resource produced by the first conversion process is used by the \textit{Using motifs} economic event in a 1..* to 0..* relationship, meaning that one or many merchandise designs may be used by many of these events at once, but they don't have to be, either because there is no event taking place or because the merchandise design simply remains unused. If, however, the event is happening, at least one motif has to be used. 
+
+        Lastly, \textit{Money} economic resource is consumed by the \textit{Ordering printed material} event in a 1..1 to 1..1 relationship.
+
+        Finally, the three economic events are converted into the \textit{Merch Acquisition} event which produces the \textbf{Merch} resource.
+
+    
+    \item \textbf{High-quality Game Content Conversion Process}
+
+        Two economic decrement events are engaged in this conversion process, the first one being \textit{Game Mechanics Development}, which consumes the \textit{Labour Service} resources in a 1..1 to 0..* relationship, meaning that the employees represented by the resource are not always working on a new game mechanic, and if they are, they might not be working on only one. 
+        
+        The second event is \textit{Purchase of Hardware}, which consumes \textit{Money} in a 1..1 to 1..1 relationship (i.e., one purchase requires one sum of money representing the sum necessary for one purchase, and you cannot pay for more than one purchase using a sum representing one purchase payment).
+
+        The two events are converted into the \textit{Acquisition of High-Quality Game Content} event, which produces the \textbf{High-Quality Game Content} resource.
+
+    \item \textbf{High-quality Game Content Conversion Process}
+
+    Three economic events participate in this conversion process. The first decrement event, \textit{Selling Merch}, 
+        
+
+    
+    
+
+    
+
+    
+\end{enumerate}
+
+\subsubsection{Exchange Processes}
+ADD 8 DIAGRAMS\\
+We modelled the following Exchange Processes:
+
+Neigh Corp - Server Hosting Provider (Server Hosting Service)
+Neigh Corp - Pentesting Service Provider (Pentesting Service)
+Neigh Corp - Outsourced Game Development Contractor (Game Development Service)
+Neigh Corp - Player (Premium Pass)
+Neigh Corp - Player (Base Game Access)
+Neigh Corp - Employee (Labour Service)
+Neigh Corp - Tax Agency (Money)
+Neigh Corp - Insurance Company (Rights to claim insurance)
 
 \subsection{Detailed Processes in EPC}
-Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams. \\
+Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams.
+
+\subsubsection{Sales Process}
+Involved in the Sales Process are the organisational units Marketing, Sales, Player, Billing, Payment Provider, Shop System, and the ERP System.
+
+DESCRIPTION
+
+\subsubsection{Procurement Process}
+In the Procurement Process, the organisational units Procurement, ERP System, Manager, Office, and Finance are involved.
 
 The process starts when the company identifies a need to purchase goods or services. The Procurement department creates an internal purchase request, which is then registered. The ERP system checks the value of the request. If the value exceeds SEK 50,000, a manager reviews the request and either approves or rejects it. Requests of SEK 50,000 or less continue without managerial approval.
 Approved requests and requests that do not require approval are released for purchasing. The Procurement department then selects a supplier. If the manager rejects the request, the ERP system notifies the requester and the case is closed.
@@ -407,6 +486,13 @@ Approved requests and requests that do not require approval are released for pur
 After the supplier is selected, the Procurement department creates a purchase order and negotiates the payment terms with the supplier. If the terms are agreed without prepayment, the order is sent to the supplier. If the supplier requires prepayment, a manager must approve it. If approved, the Finance department pays the prepayment, and Procurement then sends the purchase order to the supplier. If the manager rejects the prepayment, Procurement cancels the purchase order and the process ends.
 
 After the purchase order is sent, the Office receives the goods or services and registers the goods receipt. In parallel, the ERP system receives the invoice. Both steps must be completed before the process continues.The Finance department then compares the purchase order, the goods receipt and the invoice through a three-way match. If they match, Finance settles the invoice. If they do not match, the Procurement department rejects the invoice and notifies the supplier.
+
+\subsubsection{Hiring Process}
+In the Hiring Process, the involved organisational units are HR, Manager, and IT.
+
+When a need for staff is identified, the Hiring Process begins. A manager creates a staffing request which is being reviewed by HR. If they do not approve, the manager is notified and the request will be closed. If they approve, they create a job posting with the manager that they publish. Then, the applications will be collected and screened by HR. The manager shortlists the candidates and HR schedules interviews. The manager conducts interviews and evaluates the candidates. If there are no fitting candidates to select, HR closes the recruitment. If one candidate get selected, HR prepares a job offer, sends it to the candidate and HR and the manager wait for an answer. If the candidate declines the offer, the manager decides whether to close the recruitment if no other candidate should be selected, or if the job should be offered and sent out to another candidate.
+When an offer is accepted by a candidate, HR prepares and sends out an employment contract. After the contract is signed, IT sets up IT access and sets up the workspace while the manager plans an introduction for the new employee.
+Then, the new employee is welcomed on their first day by the manager. The process is completed now that the employee is onboarded.
 
 
 \subsection{Relationships between Models}
