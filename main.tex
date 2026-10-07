@@ -224,6 +224,8 @@ Goal 9, establishing a strongly recognizable brand also combats this through est
 \textbf{Bargaining Power of Buyers:}
 This force measures how much power the buyers have. The influencers in the goal model that show weakness in this force are influencer 11 and 14, which state that the target group is easily convinced to pay and gamble. The factors that strengthen this force are influencer 15 and 21, which state that parents control purchases of younger players and that pop-up ads can decrease their game enjoyment.
 
+To combat this force, among others the means 17 is implemented, which presents the customers with an optional, regular subscription for continued premium game access. This can appease the mind of concerned parents with a predictable expense. This is related to the VDML value transfer between Neigh Corp and Pay2play players. 
+
 inf 11, 13, 15, 21
 
 \textbf{Bargaining Power of Suppliers}
@@ -270,7 +272,7 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
     
         The economic event \textit{Designing motifs} decrements the \textit{Labour Service} resource with a 1..1 to 0..* multiplicity, meaning that one and only one labour service, representing the act of employees working, can simultaneously be engaged in many motif designs, or as few as zero. The resource is \textbf{consumed}.
         
-        \textit{Working with Software} decrements \text{software} in a \textbf{use} relationship, i.e., the software is not permanently destroyed in the process and can be used again in future processes. The software may be used by zero or many of these events, and the event itself may be using one or many software resources, as the event name itself implies at least one software resource has to be used.
+        \textit{Working with Software} decrements software in a \textbf{use} relationship, i.e., the software is not permanently destroyed in the process and can be used again in future processes. The software may be used by zero or many of these events, and the event itself may be using one or many software resources, as the event name itself implies at least one software resource has to be used.
     
         Lastly, the event \textit{Using assets in design} decrements \textit{Licenses} - the resource representing licenses that may be necessary to acquire in order to use certain design elements (assets, as the event name implies). Zero or many licenses may be necessary as there is no guarantee copyrighted material will be used. For that reason, licenses are also engaged in zero-to-many of these events, as they may or may not be used by many asset design use events.
     
@@ -310,7 +312,7 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 
     Moving on, the \textit{Publishing Game content} decrement \textbf{uses} the \textit{High-Quality Game Content} produced in the previous process, the multiplicities being 1..* to 0..*. This implies that at least one unit of high-quality game content must be used by the event, as its very name suggests, though there is no set limit. Meanwhile, \textit{High-Quality Game Content} can exist as a unit without having to be actively used, hence the 0..* on the right side.
 
-    The last economic event is \textit{Publishing Social Media Content} which consumes the \textit{Social Media Content}, the reasoning being that once a social media post is made public, publishing it again will be redundant, as it will have already used up its value as a form of advertisement. The multiplicities between the resource and the event are 1..* to 0..*, using roughly the same logic as in the previous resource-event relationship (the event name implies at least one resource has to be used for the event to occur, and the resource can exist without being engaged in the event). 
+    The last economic event is \textit{Publishing Social Media Content}, which consumes the \textit{Social Media Content}, the reasoning being that once a social media post is made public, publishing it again will be redundant, as it will have already used up its value as a form of advertisement. The multiplicities between the resource and the event are 1..* to 0..*, using roughly the same logic as in the previous resource-event relationship (the event name implies at least one resource has to be used for the event to occur, and the resource can exist without being engaged in the event). 
 
     The three events are converted into the \textit{Awareness Acquisition} increment event, which, finally, produces \textbf{Brand Awareness}, representing how well-known Neigh Corp's company name is, as well as the game itself. 
         
@@ -325,16 +327,132 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 
 \subsubsection{Exchange Processes}
 ADD 8 DIAGRAMS\\
-We modelled the following Exchange Processes:
+We modelled the following Exchange Processes.
 
-Neigh Corp - Server Hosting Provider (Server Hosting Service)
-Neigh Corp - Pentesting Service Provider (Pentesting Service)
-Neigh Corp - Outsourced Game Development Contractor (Game Development Service)
-Neigh Corp - Player (Premium Pass)
-Neigh Corp - Player (Base Game Access)
-Neigh Corp - Employee (Labour Service)
-Neigh Corp - Tax Agency (Money)
-Neigh Corp - Insurance Company (Rights to claim insurance)
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Base-Game-Access-Exchange}
+        \caption{REA Base Game Access Exchange}
+    \label{fig:REA_Base_Game_Access_Exchange}
+    \end{figure}
+\end{center}
+
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Conversion}
+        \caption{REA Conversion}
+    \label{fig:REA_Conversion}
+    \end{figure}
+\end{center}
+
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-ExP-Premium-Game-Acess}
+        \caption{REA ExP Premium Game Acess}
+    \label{fig:REA_ExP_Premium_Game_Acess}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Game-Development-Exchange}
+        \caption{REA Game Development Exchange}
+    \label{fig:REA_Game_Development_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Game-development-Exchange}
+        \caption{REA Game development Exchange}
+    \label{fig:REA_Game_development_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Insurance-Exchange}
+        \caption{REA Insurance Exchange}
+    \label{fig:REA_Insurance_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Labour-Service-Exchange}
+        \caption{REA Labour Service Exchange}
+    \label{fig:REA_Labour_Service_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Page-1}
+        \caption{REA Page 1}
+    \label{fig:REA_Page_1}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Pentest-Service-Exchange}
+        \caption{REA Pentest Service Exchange}
+    \label{fig:REA_Pentest_Service_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Premium-pass-Exchange}
+        \caption{REA Premium pass Exchange}
+    \label{fig:REA_Premium_pass_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Server-Hosting-Exchange}
+        \caption{REA Server Hosting Exchange}
+    \label{fig:REA_Server_Hosting_Exchange}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_REA-Tax-Exchange}
+        \caption{REA Tax Exchange}
+    \label{fig:REA_Tax_Exchange}
+    \end{figure}
+\end{center}
+
+Neigh Corp exchanges Money for Server Hosting Service from a Server Hosting Provider. The contract includes a Server Hosting Purchase Orderline Commitment and a Server Hosting Payment Orderline Commitment. The Server Hosting has different types.
+The other Exchanges (with Pentesting Service Provider, Outsourced Game Development Contractor, Player, Tax Agence, and Insurance Company)  are modelled in a very similar way. The Labour Service Exchange with an Employee also has a resource type for the Labour Service. 
 
 \subsection{Detailed Processes in EPC}
 Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams.
