@@ -959,7 +959,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Ydx48FfAcqYwmqi1O13a-49" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Renewnal of pass subscription after 1 month&amp;nbsp;" vertex="1">
-          <mxGeometry height="40" width="120" x="104" y="1050" as="geometry" />
+          <mxGeometry height="40" width="138" x="95" y="1050" as="geometry" />
         </mxCell>
         <mxCell id="Ydx48FfAcqYwmqi1O13a-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="renew order" vertex="1">
           <mxGeometry height="40" width="120" x="104" y="1109" as="geometry" />
