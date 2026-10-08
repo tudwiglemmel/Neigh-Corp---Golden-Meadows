@@ -329,8 +329,6 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 \end{enumerate}
 
 \subsubsection{Exchange Processes}
-ADD 8 DIAGRAMS\\
-We modelled the following Exchange Processes.
 
 \begin{center}
     \begin{figure}[H]
@@ -341,18 +339,6 @@ We modelled the following Exchange Processes.
     \label{fig:REA_Base_Game_Access_Exchange}
     \end{figure}
 \end{center}
-
-
-\begin{center}
-    \begin{figure}[H]
-    \includegraphics[width=\linewidth,
-                     height=0.85\textheight,
-                     keepaspectratio]{figures/IS1_Project_REA-Conversion}
-        \caption{REA Conversion}
-    \label{fig:REA_Conversion}
-    \end{figure}
-\end{center}
-
 
 \begin{center}
     \begin{figure}[H]
@@ -444,8 +430,18 @@ We modelled the following Exchange Processes.
     \end{figure}
 \end{center}
 
-Neigh Corp exchanges Money for Server Hosting Service from a Server Hosting Provider. The contract includes a Server Hosting Purchase Orderline Commitment and a Server Hosting Payment Orderline Commitment. The Server Hosting has different types.
-The other Exchanges (with Pentesting Service Provider, Outsourced Game Development Contractor, Player, Tax Agence, and Insurance Company)  are modelled in a very similar way. The Labour Service Exchange with an Employee also has a resource type for the Labour Service. 
+The Exchanges are all modelled in a similar way, with the main difference being added types for some economic resources (Hosting Type and Labour Type). We describe the Premium Pass Exchange as an example.
+\\
+
+The Premium Pass Exchange describes how Neigh Corp provides premium game access to a player in return for money. Neigh Corp and the player are the economic agents, while Premium Game Access and Money are the resources exchanged.
+
+The Premium Pass Order represents the agreement between the two parties. It records the order ID, creation date, status and total amount. The order includes two commitments: the Premium Pass Purchase Orderline and the Premium Pass Payment Orderline. These represent the promise to provide premium access and the promise to pay for it. The reciprocity relationship connects these commitments because each is made in return for the other.
+
+The commitments are fulfilled through two economic events. The Premium Pass Assignment records the actual allocation of premium access to the player's account, including the account ID, activation date and status. The Premium Pass Payment records the payment received, including the payment ID, amount, payment method, transfer date and status.
+
+From Neigh Corp's perspective, the assignment is a decrement event because access is provided to the player, while the payment is an increment event because money is received. The exchange duality relationship connects these events as the two sides of the exchange. The model therefore distinguishes between what the parties promise and what they actually provide.
+
+
 
 \subsection{Detailed Processes in EPC}
 Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams.
@@ -463,8 +459,18 @@ Include a number of detailed process models, expressed as EPC diagrams. The proc
 \end{center}
 
 Involved in the Sales Process are the organisational units Marketing, Sales, Player, Billing, Payment Provider, Shop System, and the ERP System.
+The sales process describes how Neigh Corp sells premium passes to players, from promoting the pass to completing the order and handling subscription renewal.
 
-DESCRIPTION
+The process starts when new premium content is added to the game. Marketing promotes the premium pass, and Sales presents the pass and its prices when the store is opened. The player can either select a premium pass or leave without buying. If the player leaves, Marketing sends a follow-up offer. If the player selects a pass, they can apply a promotional code, a bundle offer, or continue without either option. The final price is then determined.
+
+Sales checks whether the player is eligible to purchase the pass. If the player is not eligible, the Shop System shows both the reason and an alternative, and the sale is not completed. If the player is eligible, they confirm the purchase, and Sales confirms the order.
+
+After the order is confirmed, Billing creates an invoice while the Payment Provider processes the payment. Both the invoice and a confirmed payment are required before the Game System assigns the purchased items to the player's account. Billing then sends a receipt and confirmation, and Sales marks the order as completed.
+
+If the payment fails, the Payment System increases a failure counter. After the first failed attempt, the player receives an alternative payment link that is valid for two days. If the player pays through this link, the process returns to payment processing. If the link expires or the payment fails more than once, the order is marked as failed and the invoice is cancelled. Support then contacts the player about the failed order.
+
+For completed orders, Sales requests player feedback and analyses the sales results, whether or not feedback is received. The ERP System then checks the subscription status. If the subscription is renewed after one month, a new order enters the order-handling process. If the subscription is cancelled, Sales records the reason for cancellation and the sales cycle ends.
+
 
 \subsubsection{Procurement Process}
 \begin{center}
