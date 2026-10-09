@@ -30,7 +30,7 @@ jobs:
           path: media
           output: ../figures
           action-mode: all
-          transparent: false
+          transparent: True
           crop: true
           border: 0
 
