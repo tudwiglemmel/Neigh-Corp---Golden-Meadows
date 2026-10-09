@@ -6,9 +6,25 @@
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage{float}
-\usepackage{biblatex} %Imports biblatex package
+\usepackage{fancyhdr}
+\usepackage{biblatex}
+\usepackage{parskip}
 \usepackage[hidelinks]{hyperref}
-\addbibresource{references.bib} %Import the bibliography file
+\addbibresource{references.bib}
+\setlength{\headheight}{1cm}
+\pagestyle{fancy}
+\usepackage{xcolor}
+\fancyhf{}
+
+\definecolor{mybg}{HTML}{FCF7F8}
+
+\pagecolor{mybg}
+
+\rhead{\includegraphics[height=2cm]{logos_images_pdf/logo_company.pdf}}
+\renewcommand{\headrulewidth}{0pt}
+
+\includegraphics[width=0.99\textwidth]{logos_images_pdf/logo_game.pdf}
+
 
 \title{Neigh Corp - Golden Meadows}
 \author{Marlen Baumgart \and Rodions Busurovs \and Carmen Silberbach \and  Martin Kashapov \and  Ludwig Temmel \and  Ilyas Yildirim}
@@ -37,7 +53,6 @@
 \section{Introduction}
 This section is to give a general introduction to the company, including a description of its
 main product offerings, markets, and strategy.
-\\
 
 Neigh Corp is a small game company aiming to create its first horse-themed game.
 The product is an MMORPG with "gacha mechanics", a video game system in which the player spends in-game currency to receive a random in-game item, that combines various semi-realistic, real-life horse-related activities into a single game. The game is designed to be refreshing, immersive, and modern, and allows the player to roleplay as a horse trainer, enjoy riding in an open world, take part in competitions, and gather and sell horses and horse equipment. The game will have a lively community active in the game forum.
@@ -210,7 +225,7 @@ This section is to show the goals of the company. The goals shall be clearly rel
 The first level, named "Learning \& Growth" contains the technologies used in the company. This level supports the one above it, "Internal Business Processes" which lists the methods and processes the company uses to create value. The "Customer" perspective contains the most elements and describes how these processes create value for the customer, and the final "Financial" level shows how all these elements combine to fulfil the most important monetary goals in the company such as profit and recurring revenue.
 
 The goal model was created with the previously shown \autoref{fig:VDML_diagram} diagram in mind and in accordance with Porters five forces \cite{quickmba_porter} and Porters generic strategies. %\cite{wikipedia_porter_generic_strategies}.
-Each of porters five forces are listed below with an analysis of which parts of the diagram belong to it, which Generic strategy is used to combat its force and the reasoning behind their Strategy maps classification.  The overarching approach for Golden Meadows is differentiation, as the target customer group for this game is rather niche.\\
+Each of porters five forces are listed below with an analysis of which parts of the diagram belong to it, which Generic strategy is used to combat its force and the reasoning behind their Strategy maps classification.  The overarching approach for Golden Meadows is differentiation, as the target customer group for this game is rather niche.
 
 \textbf{Competitive rivalry:}
 This force measures how many competing products there are on the market. A large number of competitors results in a greater force. Influencers 14 and 16 measure this force. They indicate that there is increasing competition from Chinese gaming companies and that there is one established competitor with high market share and high cost of switching. This makes the competitive rivalry force comparatively strong, since the potential for new competitors emerging has increased, and potential customers experience a high cost of switching to Golden Meadows. 
@@ -431,7 +446,7 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 \end{center}
 
 The Exchanges are all modelled in a similar way, with the main difference being added types for some economic resources (Hosting Type and Labour Type). We describe the Premium Pass Exchange as an example.
-\\
+
 
 The Premium Pass Exchange describes how Neigh Corp provides premium game access to a player in return for money. Neigh Corp and the player are the economic agents, while Premium Game Access and Money are the resources exchanged.
 
