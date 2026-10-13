@@ -23,6 +23,7 @@ jobs:
           download 1ondUSZTKFug9XV9pIMQDr_u0hKzc-j1q IS1_Project_Goal_model.drawio
           download 1-j006A3rryGp3coW_dueU5omBixdOlJ5 IS1_Project_REA.drawio
           download 1f0HkPvfpI6yo6FCyUBMpHGYmZPtREN4g IS1_Project_EPC_Model.drawio
+          download 1SbxR8SoM9JV-plCECi-CbkO6BGjXmtZS IS1_Project_IT_Architecture_diagram.drawio
             
       - uses: rlespinasse/drawio-export-action@v2
         with:
