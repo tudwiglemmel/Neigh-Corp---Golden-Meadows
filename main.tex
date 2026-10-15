@@ -10,11 +10,20 @@
 \usepackage{biblatex}
 \usepackage{parskip}
 \usepackage[hidelinks]{hyperref}
+
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 \addbibresource{references.bib}
 \setlength{\headheight}{1cm}
 \pagestyle{fancy}
 \usepackage{xcolor}
 \fancyhf{}
+\rhead{\includegraphics[height=2cm]{logos_images_pdf/logo_company.pdf}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 \definecolor{mybg}{HTML}{FCF7F8}
 
@@ -46,9 +55,12 @@
     }
 
 \begin{document}
+\pagenumbering{gobble}   % suppress page numbers
     \maketitle
-
     \tableofcontents
+    \newpage
+    \pagenumbering{arabic} 
+    
     
 \section{Introduction}
 This section is to give a general introduction to the company, including a description of its
@@ -285,7 +297,7 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
     \item \textbf{Merch Design Conversion Process}
     
     
-        The economic event \textit{Designing motifs} decrements the \textit{Labour Service} resource with a 1..1 to 0..* multiplicity, meaning that one and only one labour service, representing the act of employees working, can simultaneously be engaged in many motif designs, or as few as zero. The resource is \textbf{consumed}.
+        The economic event \textit{Designing motifs} decrements the \textit{Labour Service} resource with a 1 to 0..* multiplicity, meaning that one and only one labour service, representing the act of employees working, can simultaneously be engaged in many motif designs, or as few as zero. The resource is \textbf{consumed}.
         
         \textit{Working with Software} decrements software in a \textbf{use} relationship, i.e., the software is not permanently destroyed in the process and can be used again in future processes. The software may be used by zero or many of these events, and the event itself may be using one or many software resources, as the event name itself implies at least one software resource has to be used.
     
@@ -298,26 +310,26 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 
         The same two resources described in the previous process are engaged in this conversion process as well, using identical multiplicities, with the exception of \textit{software}.
     
-        \textit{Labour Service} is consumed in a 1..1 to 0..* relationship with both the \textit{Designing Textures} and \textit{Designing Animations} decrement events. The labour service, i.e. the employees, may not necessarily be engaged in either of these events, hence the multiplicity of 0..*, but if these events are taking place, labour service must always be consumed by both of them. The \textit{Working with software} decrement event takes place once again, engaged in the same \textbf{use} relationship with \textit{software} as before. The three decrement events are converted into the \textit{Creating Character Design} increment event, which produces \textbf{Character Design}.
+        \textit{Labour Service} is consumed in a 1 to 0..* relationship with both the \textit{Designing Textures} and \textit{Designing Animations} decrement events. The labour service, i.e. the employees, may not necessarily be engaged in either of these events, hence the multiplicity of 0..*, but if these events are taking place, labour service must always be consumed by both of them. The \textit{Working with software} decrement event takes place once again, engaged in the same \textbf{use} relationship with \textit{software} as before. The three decrement events are converted into the \textit{Creating Character Design} increment event, which produces \textbf{Character Design}.
 
     \item \textbf{Merch Conversion Process}
 
         The corresponding decrement events of the process are as follows:
 
-        \textit{Designing Articles} - the event consumes \textit{Labour Service} in a 1..1 to 0..* relationship, the multiplicity reasoning being identical to what was discussed in the previous conversion processes regarding said resource. 
+        \textit{Designing Articles} - the event consumes \textit{Labour Service} in a 1 to 0..* relationship, the multiplicity reasoning being identical to what was discussed in the previous conversion processes regarding said resource. 
         
         The \textit{Merch Design} resource produced by the first conversion process is used by the \textit{Using motifs} economic event in a 1..* to 0..* relationship, meaning that one or many merchandise designs may be used by many of these events at once, but they don't have to be, either because there is no event taking place or because the merchandise design simply remains unused. If, however, the event is happening, at least one motif has to be used. 
 
-        Lastly, \textit{Money} economic resource is consumed by the \textit{Ordering printed material} event in a 1..1 to 1..1 relationship.
+        Lastly, \textit{Money} economic resource is consumed by the \textit{Ordering printed material} event in a 1 to 1 relationship.
 
         Finally, the three economic events are converted into the \textit{Merch Acquisition} event which produces the \textbf{Merch} resource.
 
     
     \item \textbf{High-quality Game Content Conversion Process}
 
-        Two economic decrement events are engaged in this conversion process, the first one being \textit{Game Mechanics Development}, which consumes the \textit{Labour Service} resources in a 1..1 to 0..* relationship, meaning that the employees represented by the resource are not always working on a new game mechanic, and if they are, they might not be working on only one. 
+        Two economic decrement events are engaged in this conversion process, the first one being \textit{Game Mechanics Development}, which consumes the \textit{Labour Service} resources in a 1 to 0..* relationship, meaning that the employees represented by the resource are not always working on a new game mechanic, and if they are, they might not be working on only one. 
         
-        The second event is \textit{Purchase of Hardware}, which consumes \textit{Money} in a 1..1 to 1..1 relationship (i.e., one purchase requires one sum of money representing the sum necessary for one purchase, and you cannot pay for more than one purchase using a sum representing one purchase payment).
+        The second event is \textit{Purchase of Hardware}, which consumes \textit{Money} in a 1 to 1 relationship (i.e., one purchase requires one sum of money representing the sum necessary for one purchase, and you cannot pay for more than one purchase using a sum representing one purchase payment).
 
         The two events are converted into the \textit{Acquisition of High-Quality Game Content} event, which produces the \textbf{High-Quality Game Content} resource.
 
@@ -456,7 +468,6 @@ From Neigh Corp's perspective, the assignment is a decrement event because acces
 
 
 \subsection{Detailed Processes in EPC}
-Include a number of detailed process models, expressed as EPC diagrams. The processes should include sales and procurement. The process models should show actions of individual actors and handle alternatives and exceptions. It is recommended to make each process diagram small by using the decomposition mechanisms of EPC diagrams.
 
 \subsubsection{Sales Process}
 
@@ -465,7 +476,7 @@ Include a number of detailed process models, expressed as EPC diagrams. The proc
     \includegraphics[width=\linewidth,
                      height=0.85\textheight,
                      keepaspectratio]{figures/IS1_Project_EPC_Model-Sales-Process.pdf}
-        \caption{Conversion processes \textit{Neigh Corp}}
+        \caption{Sales Pocess \textit{Neigh Corp}}
         \label{fig:Sales_process}
     \end{figure}
 \end{center}
@@ -490,8 +501,8 @@ For completed orders, Sales requests player feedback and analyses the sales resu
     \includegraphics[width=\linewidth,
                      height=0.85\textheight,
                      keepaspectratio]{figures/IS1_Project_EPC_Model-Procurement-Process.pdf}
-        \caption{Conversion processes \textit{Neigh Corp}}
-        \label{fig:Sales_process}
+        \caption{Procurement Processes \textit{Neigh Corp}}
+        \label{fig:Procurement_process}
     \end{figure}
 \end{center}
 
@@ -510,18 +521,35 @@ After the purchase order is sent, the Office receives the goods or services and 
     \includegraphics[width=\linewidth,
                      height=0.85\textheight,
                      keepaspectratio]{figures/IS1_Project_EPC_Model-Hiring-Process.pdf}
-        \caption{Conversion processes \textit{Neigh Corp}}
-        \label{fig:Sales_process}
+        \caption{Hiring Process \textit{Neigh Corp}}
+        \label{fig:Hiring_process}
     \end{figure}
 \end{center}
-
 
 In the Hiring Process, the involved organisational units are HR, Manager, and IT.
 
 When a need for staff is identified, the Hiring Process begins. A manager creates a staffing request which is being reviewed by HR. If they do not approve, the manager is notified and the request will be closed. If they approve, they create a job posting with the manager that they publish. Then, the applications will be collected and screened by HR. The manager shortlists the candidates and HR schedules interviews. The manager conducts interviews and evaluates the candidates. If there are no fitting candidates to select, HR closes the recruitment. If one candidate get selected, HR prepares a job offer, sends it to the candidate and HR and the manager wait for an answer. If the candidate declines the offer, the manager decides whether to close the recruitment if no other candidate should be selected, or if the job should be offered and sent out to another candidate.
 When an offer is accepted by a candidate, HR prepares and sends out an employment contract. After the contract is signed, IT sets up IT access and sets up the workspace while the manager plans an introduction for the new employee.
-Then, the new employee is welcomed on their first day by the manager. The process is completed now that the employee is onboarded.
+Then, the new employee is welcomed on their first day by the manager. The process is completed now that the employee is onboarded.\\
 
+\subsubsection{Beta Testing Process}
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_EPC_Model-Beta-Testing-Process.pdf}
+        \caption{Beta Testing Process \textit{Neigh Corp}}
+        \label{fig:Beta_Testing_Process}
+    \end{figure}
+\end{center}
+
+In the Beta Testing Process consists of the Sub-Processes Closed Beta Testing and Open Beta Testing.
+When the final Game Development Stage is reached, the Closed Beta Testing begins.
+The management and developer team selects a group of 50 individuals that are supposed to play Golden Meadows for the first time. Individuals from the list are selected and receive invitations from the Management, that they agree or disagree to. If they disagree, another individual is asked. If the individual agrees, the Management proposes a contract and a NDA to them. If they don't sign them, someone else from the list is asked. If they agree and sign, the Management sends a game copy to the Closed Beta Tester and waits for their feedback for two month, as agreed in the contract. 
+If feedback is received, the Closed Beta Tester is paid and the Management sends it to the developers. If no feedback is received after two months, the Management decides if a reminder should be sent to the Closted Beta Tester. If so, they will be notified and the Management waits another week. If no additional reminder should be sent, the Closed Beta Tester is simply notified of the cancellation of the process.
+The developers evaluate the feedback and base new implementations and changes on them if needed. 
+Now, the Closed Beta Testing is completed with making Golden Meadows available on the desired Game Vendors. The Open Beta Testing starts by publishing the game to 100.000 randomly selected Players who get early access to the game.
+After five months, all their feedback from the Game Vendors and the Game Forum is collected and sent to the developers by the Management. The developers evaluate the feedback, implement final changes if needed and finally Golden Meadows is published for all Players.
 
 \subsection{Relationships between Models}
 Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
@@ -531,19 +559,152 @@ Include one or several tables that visualize the relationships between the model
 \item What are the relationships between the EPC models and the VDML diagram?
 \end{itemize}
 
+ADD TABLE(S) TO SHOW THIS
+
 \section{IT Architecture Design}
-This section is to show the IT architecture of the company. The IT systems to be used in the company are to be specified, including BPMS, CRM, ERP, DW, BI tools, dashboard, and
-KM. The use of EAI and decision support systems (BI, DW and Dashboards) shall also be discussed. The IT architecture shall be documented graphically in a diagram showing the systems
-and the data flows between them, representing systems as nodes and data flows as labelled arrows. The relationships between the systems and the business processes they support shall be made explicit.
+ADD IT ARCHITECTURE DIAGRAM with all arrows labelled\\
+
+ADD EXPLANATION OF SYSTEMS USED AND DISCUSSION OF USE OF EAI AND DECISION SUPPORT SYSTEMS (BI, DW, DASHBOARDS)\\
+
+This section is to show the IT architecture of the company. The IT systems to be used in the company are to be specified, including BPMS, CRM, ERP, DW, BI tools, dashboard, and KM. The use of EAI and decision support systems (BI, DW and Dashboards) shall also be discussed. The IT architecture shall be documented graphically in a diagram showing the systems and the data flows between them, representing systems as nodes and data flows as labelled arrows. The relationships between the systems and the business processes they support shall be made explicit.
 
 \section{Business Performance Management}
 This section is to introduce the key performance indicators (KPI) for measuring and analysing the business processes of the company. 
 
 \subsection{Leading and Lagging KPIs}
-Include between five and ten leading and lagging indicators. Each indicator shall be described in an indicator template consisting of at least the following parts: name of the indicator, definition of the indicator, which goal(s) in the company’s goal model that the indicator is related to, target values, which part of a business process (i.e. which activity) the indicator measures, which IT system that will be the data source for the indicator, and which type of IT solution will feed the dashboard system with data from the source system. Ensure that the descriptions are consistent with the IT architecture in Section 5.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\LTleft}{-0.09\textwidth}
+\setlength{\LTright}{-0.09\textwidth}
+
+\begin{longtable}{
+  L{0.19\textwidth}
+  L{0.15\textwidth}
+  L{0.13\textwidth}
+  L{0.17\textwidth}
+  L{0.14\textwidth}
+  L{0.17\textwidth}
+  L{0.11\textwidth}
+}
+\caption{KPI definitions}\label{tab:kpis}\\
+\toprule
+\textbf{Name} & \textbf{Definition} & \textbf{Goals related to} & \textbf{Target values} & \textbf{Measured business process} & \textbf{IT system for data source} & \textbf{IT solution feeding the dashboard} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Name} & \textbf{Definition} & \textbf{Goals related to} & \textbf{Target values} & \textbf{Measured business process} & \textbf{IT system for data source} & \textbf{IT solution feeding the dashboard} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{7}{r}{\emph{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+Time of beta testing completion
+& Lagging KPI
+& Goal 7, Objective 7
+& $\geq$ 1 month before release
+& Beta Testing Process Model
+& Game Server, Source code \& documentation \& project management
+& EAI \\
+
+Golden Meadows income within last 12 months
+& Lagging KPI
+& Goal 1, Objective 6
+& $\geq$ 1\,000\,000\,000 USD income
+& ---
+& ERP, CRM
+& EAI \\
+
+Golden Meadows income break even
+& Lagging KPI
+& Goal 1, Objective 6
+& Break even by end of year two
+& ---
+& ERP, CRM
+& EAI \\
+
+Time of attaining specific microtransaction count
+& Lagging KPI
+& Goal 4, Objective 3
+& $\geq$ 4000 microtransactions, $\leq$ year 1
+& ---
+& ERP, CRM
+& EAI \\
+
+Follower count on Steam pre-release
+& Lagging KPI
+& Goal 3, Objective 1
+& $\geq$ 9000 followers
+& ---
+& ERP
+& EAI \\
+
+Amount of monthly subscriptions
+& Lagging KPI
+& Goal 8
+& $\geq$ 200\,000
+& ---
+& CRM, ERP
+& EAI \\
+
+Revenue generated by microtransactions monthly
+& Lagging KPI
+& Goal 1, Goal 4
+& $\geq$ 83 Million USD
+& ---
+& CRM, ERP
+& EAI \\
+
+Maintain retention rate monthly
+& Leading KPI: influences revenue
+& Goal 1, Goal 4
+& $\geq$ 90\,\%
+& ---
+& CRM
+& EAI \\
+
+Number of scheduled beta tests
+& Leading KPI: beta testing completion time
+& Goal 7, Objective 7
+& $\geq$ 100 test sessions
+& Beta Testing Process
+& Source code \& documentation \& project management
+& EAI \\
+
+Change in Steam rating within last month
+& Leading KPI: Steam follower count
+& Goal 2, Objective 8
+& $>$ mediocre average rating
+& ---
+& ERP
+& EAI \\
+
+Very high Steam rating within a year
+& Lagging KPI
+& Objective 8, Goal 2
+& Highest rating
+& ---
+& ERP
+& EAI \\
+
+\end{longtable}
+}
+
+ADD DESCRIPTION (without evaluating)\\
 
 \subsection{Evaluation of KPIs}
-Include an evaluation of the KPIs from the previous subsection, based on the article by Eckerson. 
+The provided KPIs in the previous section are aligned with the evaluation Eckerson proposes in "Performance Dashboards: Measuring, Monitoring, and Managing Your Business".
+
+The twelve evaluation points that are listed are aligned, owned, predictive, actionable, few, easy, balanced \& linked, trigger changes, standardized, context-driven, reinforced with incentives, and relevant.
+
+ADD EVALUATION TEXT
 
 \section{Enterprise Architecture Evaluation}
 In other parts of the work, you have designed the organization from several perspectives: goals, processes, IT architecture, and so on. All of these combined converge towards an Enterprise Architecture (EA). A key component of EA is capability, an ability and capacity that enable an enterprise to achieve a business goal in a certain context. In this light, your task is to design one capability based on the models already created. The first step is to fill in the capability elicitation template in terms of relevant goals, KPIs, context, business process variants. This should be followed by a graphical design of a capability model, for instance, by introducing links between the newly developed capability and the corresponding constructs in other models.
