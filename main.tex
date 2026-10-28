@@ -13,7 +13,6 @@
 
 \usepackage{longtable}
 \usepackage{array}
-\usepackage{booktabs}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \addbibresource{references.bib}
@@ -85,7 +84,7 @@ This section is to show the value network in which the company will work. Agents
     \label{fig:VDML_diagram}
 \end{figure}
 
-\subsection{VDML Diagram}
+\subsection{VDML Descriptions}
 \begin{figure}[H]
     \hspace*{-4cm}
     \includegraphics[width=1.6\linewidth]{figures/IS1_Project_VDML-Descriptions.pdf}
@@ -323,18 +322,25 @@ This section is to show the processes of the company. The processes shall be cle
 
 \subsection{Exchange and Conversion Processes in REA}
 \subsubsection{Conversion Processes}
-\begin{figure}[H]
-    \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.3\linewidth]{figures/IS1_Project_REA-Conversion.pdf}}
-    \caption{Conversion processes \textit{Neigh Corp}}
-    \label{fig:Conversion_process}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \makebox[\textwidth][c]{\includegraphics[width=1.3\linewidth]{figures/IS1_Project_REA-Conversion.pdf}}
+%     \caption{Conversion processes \textit{Neigh Corp}}
+%     \label{fig:Conversion_process}
+% \end{figure}
 
 Seen above is the diagram depicting every conversion process Neigh Corp is involved in. The conversion processes included are as follows:
+    \clearpage
 
 \begin{enumerate}
     \item \textbf{Merch Design Conversion Process}
-    
+
+        \begin{figure}[H]
+            \centering
+            \makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{figures/IS1_Project_REA-Merch-Design-Conversion.pdf}}
+            \caption{Merch Design Conversion Process}
+            \label{fig:Merch_Design_Conversion}
+        \end{figure}
     
         The economic event \textit{Designing motifs} decrements the \textit{Labour Service} resource with a 1 to 0..* multiplicity, meaning that one and only one labour service, representing the act of employees working, can simultaneously be engaged in many motif designs, or as few as zero. The resource is \textbf{consumed}.
         
@@ -344,14 +350,29 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
     
         Finally, each event is engaged in a one-to-many relationship with the conversion process, as each of the events may need to occur multiple times to finalise a merchandise design. The events are converted into the \textit{Merch Design Acquisition} increment event, which produces the final \textbf{Merch Design} resource.
 
+    \clearpage
     \item \textbf{Character Design Conversion Process}
 
+        \begin{figure}[H]
+            \centering
+            \makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{figures/IS1_Project_REA-Character-Design-Conversion.pdf}}
+            \caption{Character Design Conversion Process}
+            \label{fig:Character_Design_Conversion}
+        \end{figure}
 
         The same two resources described in the previous process are engaged in this conversion process as well, using identical multiplicities, with the exception of \textit{software}.
     
         \textit{Labour Service} is consumed in a 1 to 0..* relationship with both the \textit{Designing Textures} and \textit{Designing Animations} decrement events. The labour service, i.e. the employees, may not necessarily be engaged in either of these events, hence the multiplicity of 0..*, but if these events are taking place, labour service must always be consumed by both of them. The \textit{Working with software} decrement event takes place once again, engaged in the same \textbf{use} relationship with \textit{software} as before. The three decrement events are converted into the \textit{Creating Character Design} increment event, which produces \textbf{Character Design}.
 
+    \clearpage
     \item \textbf{Merch Conversion Process}
+
+        \begin{figure}[H]
+            \centering
+            \makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{figures/IS1_Project_REA-Merch-Conversion.pdf}}
+            \caption{Merch Conversion Process}
+            \label{fig:Merch_Conversion}
+        \end{figure}
 
         The corresponding decrement events of the process are as follows:
 
@@ -359,20 +380,35 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
         
         The \textit{Merch Design} resource produced by the first conversion process is used by the \textit{Using motifs} economic event in a 1..* to 0..* relationship, meaning that one or many merchandise designs may be used by many of these events at once, but they don't have to be, either because there is no event taking place or because the merchandise design simply remains unused. If, however, the event is happening, at least one motif has to be used. 
 
-        Lastly, \textit{Money} economic resource is consumed by the \textit{Ordering printed material} event in a 1 to 1 relationship.
+        Lastly, \textit{Money} economic resource is consumed by the \textit{Ordering printed material} event in a 1..* to 1..* relationship.
 
         Finally, the three economic events are converted into the \textit{Merch Acquisition} event which produces the \textbf{Merch} resource.
 
-    
+    \clearpage
     \item \textbf{High-quality Game Content Conversion Process}
 
-        Two economic decrement events are engaged in this conversion process, the first one being \textit{Game Mechanics Development}, which consumes the \textit{Labour Service} resources in a 1 to 0..* relationship, meaning that the employees represented by the resource are not always working on a new game mechanic, and if they are, they might not be working on only one. 
+        \begin{figure}[H]
+            \centering
+            \makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{figures/IS1_Project_REA-Game-Content-Conversion.pdf}}
+            \caption{High-quality Game Content Conversion Process}
+            \label{fig:Game_Content_Conversion}
+        \end{figure}
+
+        Two economic decrement events are engaged in this conversion process, the first one being \textit{Game Mechanics Development}, which consumes the \textit{Labour Service} resources in a 1 to 1 relationship, meaning that the employees represented by the resource are always working on a new game mechanic, and if they are, they are always working on only one. 
         
-        The second event is \textit{Purchase of Hardware}, which consumes \textit{Money} in a 1 to 1 relationship (i.e., one purchase requires one sum of money representing the sum necessary for one purchase, and you cannot pay for more than one purchase using a sum representing one purchase payment).
+        The second event is \textit{Purchase of Hardware}, which consumes \textit{Money} in a 1..* to 1..* relationship (i.e., one purchase requires an abstract unit of money, and the same unit of money may be used on many purchases).
 
         The two events are converted into the \textit{Acquisition of High-Quality Game Content} event, which produces the \textbf{High-Quality Game Content} resource.
 
-    \item \textbf{High-quality Game Content Conversion Process}
+    \clearpage
+    \item \textbf{Brand Awareness Conversion Process}
+
+        \begin{figure}[H]
+            \centering
+            \makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{figures/IS1_Project_REA-Brand-Awareness-Conversion.pdf}}
+            \caption{Brand Awareness Conversion Process}
+            \label{fig:Awareness_Conversion}
+        \end{figure}
 
     Three economic events participate in this conversion process. The first decrement event, \textit{Selling Merch}, consumes the \textit{Merch} resource produced in the earlier conversion process in a 1..* to 0..* relationship, meaning that if merchandise is being sold, at least one unit of merchandise must actually be consumed in the process, though not limited to one. Merchandise itself does not necessarily have to be in the process of being sold, and it can be sold by multiple \textit{Selling Merch} events given that more copies can be theoretically made.
 
@@ -380,11 +416,7 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
 
     The last economic event is \textit{Publishing Social Media Content}, which consumes the \textit{Social Media Content}, the reasoning being that once a social media post is made public, publishing it again will be redundant, as it will have already used up its value as a form of advertisement. The multiplicities between the resource and the event are 1..* to 0..*, using roughly the same logic as in the previous resource-event relationship (the event name implies at least one resource has to be used for the event to occur, and the resource can exist without being engaged in the event). 
 
-    The three events are converted into the \textit{Awareness Acquisition} increment event, which, finally, produces \textbf{Brand Awareness}, representing how well-known Neigh Corp's company name is, as well as the game itself. 
-        
-
-    
-    
+    The three events are converted into the \textit{Awareness Acquisition} increment event, which, finally, produces \textbf{Brand Awareness}, representing how well-known Neigh Corp's company name is, as well as the game itself.
 
     
 
@@ -407,9 +439,9 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
     \begin{figure}[H]
     \includegraphics[width=\linewidth,
                      height=0.85\textheight,
-                     keepaspectratio]{figures/IS1_Project_REA-Premium-pass-Exchange}
+                     keepaspectratio]{figures/IS1_Project_REA-Premium-Pass-Exchange.pdf}
         \caption{REA Premium Game Acess}
-    \label{fig:REA_ExP_Premium_Game_Acess}
+    \label{fig:REA_Premium_Pass_Exchange}
     \end{figure}
 \end{center}
 
@@ -420,16 +452,6 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
                      keepaspectratio]{figures/IS1_Project_REA-Game-Development-Exchange}
         \caption{REA Game Development Exchange}
     \label{fig:REA_Game_Development_Exchange}
-    \end{figure}
-\end{center}
-
-\begin{center}
-    \begin{figure}[H]
-    \includegraphics[width=\linewidth,
-                     height=0.85\textheight,
-                     keepaspectratio]{figures/IS1_Project_REA-Game-development-Exchange}
-        \caption{REA Game development Exchange}
-    \label{fig:REA_Game_development_Exchange}
     \end{figure}
 \end{center}
 
@@ -460,16 +482,6 @@ Seen above is the diagram depicting every conversion process Neigh Corp is invol
                      keepaspectratio]{figures/IS1_Project_REA-Pentest-Service-Exchange}
         \caption{REA Pentest Service Exchange}
     \label{fig:REA_Pentest_Service_Exchange}
-    \end{figure}
-\end{center}
-
-\begin{center}
-    \begin{figure}[H]
-    \includegraphics[width=\linewidth,
-                     height=0.85\textheight,
-                     keepaspectratio]{figures/IS1_Project_REA-Premium-pass-Exchange}
-        \caption{REA Premium pass Exchange}
-    \label{fig:REA_Premium_pass_Exchange}
     \end{figure}
 \end{center}
 
@@ -568,6 +580,7 @@ After the purchase order is sent, the Office receives the goods or services and 
 In the Hiring Process, the involved organisational units are HR, Manager, and IT.
 
 When a need for staff is identified, the Hiring Process begins. A manager creates a staffing request which is being reviewed by HR. If they do not approve, the manager is notified and the request will be closed. If they approve, they create a job posting with the manager that they publish. Then, the applications will be collected and screened by HR. The manager shortlists the candidates and HR schedules interviews. The manager conducts interviews and evaluates the candidates. If there are no fitting candidates to select, HR closes the recruitment. If one candidate get selected, HR prepares a job offer, sends it to the candidate and HR and the manager wait for an answer. If the candidate declines the offer, the manager decides whether to close the recruitment if no other candidate should be selected, or if the job should be offered and sent out to another candidate.
+
 When an offer is accepted by a candidate, HR prepares and sends out an employment contract. After the contract is signed, IT sets up IT access and sets up the workspace while the manager plans an introduction for the new employee.
 Then, the new employee is welcomed on their first day by the manager. The process is completed now that the employee is onboarded.\\
 
@@ -585,23 +598,105 @@ Then, the new employee is welcomed on their first day by the manager. The proces
 In the Beta Testing Process consists of the Sub-Processes Closed Beta Testing and Open Beta Testing.
 When the final Game Development Stage is reached, the Closed Beta Testing begins.
 The management and developer team selects a group of 50 individuals that are supposed to play Golden Meadows for the first time. Individuals from the list are selected and receive invitations from the Management, that they agree or disagree to. If they disagree, another individual is asked. If the individual agrees, the Management proposes a contract and a NDA to them. If they don't sign them, someone else from the list is asked. If they agree and sign, the Management sends a game copy to the Closed Beta Tester and waits for their feedback for two month, as agreed in the contract. 
+
 If feedback is received, the Closed Beta Tester is paid and the Management sends it to the developers. If no feedback is received after two months, the Management decides if a reminder should be sent to the Closted Beta Tester. If so, they will be notified and the Management waits another week. If no additional reminder should be sent, the Closed Beta Tester is simply notified of the cancellation of the process.
+
 The developers evaluate the feedback and base new implementations and changes on them if needed. 
 Now, the Closed Beta Testing is completed with making Golden Meadows available on the desired Game Vendors. The Open Beta Testing starts by publishing the game to 100.000 randomly selected Players who get early access to the game.
 After five months, all their feedback from the Game Vendors and the Game Forum is collected and sent to the developers by the Management. The developers evaluate the feedback, implement final changes if needed and finally Golden Meadows is published for all Players.
 
 \subsection{Relationships between Models}
 Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
+
 \begin{itemize}
 \item How does the design of the processes help in fulfilling the goals of the company? 
 \item What are the relationships between the exchange and conversion processes and the EPC models? 
 \item What are the relationships between the EPC models and the VDML diagram?
 \end{itemize}
 
-ADD TABLE(S) TO SHOW THIS
+\begin{table}[H]
+    \caption{Relationships between the business process and goal models}
+    \label{tab:model-relationships}
+    \small
+    \begin{tabular}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+        \toprule
+        & \textbf{EPC} & \textbf{Conversion} &
+        \textbf{Exchange} & \textbf{Goal model} \\
+        \midrule
+        \textbf{EPC}
+        & -- 
+        & Represents activities that support conversion processes
+        & Represents activities that support exchange processes
+        & Activities contribute to achieving company goals \\
+        \midrule
+        \textbf{Conversion}
+        & Implemented through relevant process activities
+        & --
+        & May depend on exchanged resources
+        & Supports goals through value creation \\
+        \midrule
+        \textbf{Exchange}
+        & Implemented through relevant process activities
+        & May provide resources needed for conversion
+        & --
+        & Supports goals through resource and value exchange \\
+        \midrule
+        \textbf{Goal model}
+        & Goals are supported by process activities
+        & Defines desired outcomes of conversion
+        & Defines desired outcomes of exchange
+        & -- \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \caption{Relationships between EPC models and the VDML diagram}
+    \label{tab:epc-vdml}
+    \begin{tabular}{p{3cm}p{4cm}p{6cm}}
+        \toprule
+        \textbf{EPC model} & \textbf{Corresponding VDML element}
+        & \textbf{Relationship} \\
+        \midrule
+        EPC activities
+        & Activities and capabilities
+        & EPC activities describe the process steps through which work is performed, while VDML can represent the capabilities and activities involved in delivering value. \\
+        \midrule
+        EPC events
+        & Business state or activity context
+        & EPC events describe conditions that trigger or result from process activities. The corresponding VDML representation depends on the elements included in the diagram. \\
+        \midrule
+        EPC functions
+        & Activities and roles
+        & EPC functions describe what is performed, while VDML can associate activities with roles and responsibilities. \\
+        \midrule
+        EPC process flow
+        & Value delivery and collaboration
+        & EPC illustrates the sequence and dependencies of process steps, while VDML can provide a broader view of how activities and participants contribute to value delivery. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Table like this 
+
+Company goal
+
+Supporting process
+
+Model evidence
+
+Contribution to the goal
 
 \section{IT Architecture Design}
-ADD IT ARCHITECTURE DIAGRAM with all arrows labelled\\
+\begin{center}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth,
+                     height=0.85\textheight,
+                     keepaspectratio]{figures/IS1_Project_IT_Architecture_diagram-Page-1.pdf}
+        \caption{IT Architecture Diagram \textit{Neigh Corp}}
+        \label{fig:IT_Architecture}
+    \end{figure}
+\end{center}
 
 ADD EXPLANATION OF SYSTEMS USED AND DISCUSSION OF USE OF EAI AND DECISION SUPPORT SYSTEMS (BI, DW, DASHBOARDS)\\
 
@@ -736,24 +831,127 @@ Very high Steam rating within a year
 \end{longtable}
 }
 
-ADD DESCRIPTION (without evaluating)\\
+\subsection{Description of KPIs}
+
+We defined 8 Lagging and 3 Leading KPIs for monitoring our progress. All stand in relationship with the EAI that feeds the dashboard.
+Each KPI is related to one or more company goals, specified with target values and mapped to the IT system.
+
+\begin{itemize}
+
+\item \textbf{Golden Meadows income break even} - Lagging KPI related to Goal 1 (To profit from Golden Meadows) as well as Objective 6 (One billion dollars annual income 2 years after the release, or reach break even within 2 years). The only identified target value is to break even by end of year two, the related IT solution being EAI and the data sources identified being ERP & CRM. The measured business process is Beta Testing Process Model.
+
+\item \textbf{Time of attaining specific microtransaction count} - Lagging KPI concerning Goal 4 and Objective 3 (To get users to make payments inside of Golden Meadows and to receive 4000 daily microtransactions by the end of year 1). The target value is derived from the objective and is simply to attain more than or exactly 4000 microtransactions no longer than one year after release. The same IT data sources are used as in the previous KPI, as well as the same IT solution.
+
+\item \textbf{Follower count on Steam pre-release}, also identified as a lagging KPI, related to Goal 3 (To gain a community that is interested in all of the company's games) and Objective 1 (Have 9.000 followers on Steam before the release). Target value: more than or exactly 9000 followers. ERP is the only data source while the IT solution is the same as in the previous two lagging KPI's.
+
+\item \textbf{Amount of monthly subscriptions} - Lagging KPI related only to goal 8 (To generate recurring revenue from the player), sharing the same data sources and the IT solution as the first two identified KPI's. Target value is 200000, i.e. the amount of subscribers.
+
+\item \textbf{Revenue generated by microtransactions monthly} - related goals 1 & 4 (To profit from Golden Meadows and To get users to make payments inside of Golden Meadows), also being lagging, having the target value of no less than 83 million USD. The same data sources and the IT solution are used as before.
+
+\item \textbf{Maintain retention rate monthly} - Leading KPI related to the same goals as the previous KPI, only using CRM as its data source while also using EAI as the IT solution. Its target value is more than or equals to 90\%, representing retention rate. This KPI influences lagging KPI's related to revenue. 
+
+\item \textbf{Number of scheduled beta tests} - Leading KPI influencing \textit{Time of Beta Testing Completion}, data sources being source code, documentation, as well as project mangement. The target value is no more than 100 test sessions. The measured business process is Beta Testing Process while the IT solution is EAI. It relates to goal 7 (to ensure the same quality of game mechanics for all) and objective 7 (complete beta testing 1 month before release).
+
+\item \textbf{Change in Steam rating within last month} - Third leading KPI influencing \textit{Steam Follower Count}. Its target value is greater than mediocre/average rating, data source being ERP and IT solution being EAI. It relates to goal 2 (to make Golden Meadows enjoyable to play for the target market) as well as objective 8 (reach 4 out of 5 stars for Golden Meadows on Google Play 3 months after the release AND reach the "very positive" rating on steam within one year after release).
+
+\item \textbf{Very high Steam rating within a year} - Lagging KPI related to the same goal and objective as the previous one, its target value being "highest rating", data source and IT solutions also being identical to the ones used by the leading KPI above.
+\end{itemize}
+
+
 
 \subsection{Evaluation of KPIs}
 The provided KPIs in the previous section are aligned with the evaluation Eckerson proposes in "Performance Dashboards: Measuring, Monitoring, and Managing Your Business".
 
 The twelve evaluation points that are listed are aligned, owned, predictive, actionable, few, easy, balanced \& linked, trigger changes, standardized, context-driven, reinforced with incentives, and relevant.
 
-ADD EVALUATION TEXT
+The KPIs are designed to be aligned with the company's goals and objectives, with each KPI linked to specific business outcomes. They include both leading and lagging indicators, allowing the company to monitor factors that influence future performance as well as measure achieved results. The target values provide measurable performance expectations, while the identified business processes and IT systems indicate where the relevant data can be obtained and how it can be integrated into the dashboard.
+
+Furthermore, the KPIs cover several areas of business performance, including financial results, customer retention, marketing performance, and beta testing. This supports a balanced view of the company's progress. The defined targets can also help identify deviations from expected performance and indicate when corrective action may be necessary.
+
+However, not all evaluation points can be confirmed from the KPI definitions alone. Criteria such as clear ownership, ease of understanding, standardized measurement, contextual interpretation, and the use of incentives require additional information about how the KPIs will be implemented and managed. Therefore, while the proposed KPIs address several of Eckerson's evaluation principles, their full compliance with all twelve criteria depends on the company's broader performance management practices.
 
 \section{Enterprise Architecture Evaluation}
 In other parts of the work, you have designed the organization from several perspectives: goals, processes, IT architecture, and so on. All of these combined converge towards an Enterprise Architecture (EA). A key component of EA is capability, an ability and capacity that enable an enterprise to achieve a business goal in a certain context. In this light, your task is to design one capability based on the models already created. The first step is to fill in the capability elicitation template in terms of relevant goals, KPIs, context, business process variants. This should be followed by a graphical design of a capability model, for instance, by introducing links between the newly developed capability and the corresponding constructs in other models.
 
+FILL IN CAPABILITY ELICITAION TEMPLATE
 
+ADD CAPABILITY MODEL DESIGN
+
+\renewcommand{\arraystretch}{1.4}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+\begin{longtable}{L{0.27\textwidth} L{0.68\textwidth}}
+    \caption{Capability: Game Development}
+    \label{tab:game-development-capability} \\
+
+    \toprule
+    \textbf{Field} & \textbf{Description} \\
+    \midrule
+    \endfirsthead
+
+    \toprule
+    \textbf{Field} & \textbf{Description} \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \endfoot
+
+    \textbf{Capability Name}
+    & Game Development \\
+
+    \textbf{Capability Description}
+    & The ability to plan, design, develop, test, and deliver high-quality game content that makes Golden Meadows enjoyable, appeals to horse-interested users, maintains consistent game mechanics, and encourages players to continue playing. \\
+
+    \textbf{Relevant Business Goals}
+    & \begin{itemize}
+        \item Goal 1: To profit from Golden Meadows.
+        \item Goal 2: To make Golden Meadows enjoyable to play
+              for the target market.
+        \item Goal 7: To ensure the same quality of game mechanics
+              for all.
+        \item Goal 10: To have high long-term user retention.
+    \end{itemize} \\
+
+    \textbf{Key Performance Indicators (KPIs)}
+    & \begin{itemize}
+        \item Time of beta testing completion
+        \item Maintain retention rate monthly
+        \item Number of scheduled beta tests
+        \item Change in Steam rating within last month
+        \item Very high Steam rating within a year
+    \end{itemize} \\
+
+    \textbf{Context}
+    & Golden Meadows is a MMORPG Horse game developed by neighcorp. The target market is horse interested persons that are young and want a realistic Horse experience. The company develops key functionalities itself, but also outsources parts of the Development. This can lead to variating quality.\\
+
+    \textbf{Business Process Variants}
+    & \begin{itemize}
+        \item High Quality Game Content Conversion Process
+        \item Character Design Conversion Process
+        \item Labour Service Exchange Process
+        \item Pentest Service Exchange
+        \item Hiring Process
+        \item Procurement Process
+        \item Beta testing process
+    \end{itemize} \\
+
+    \textbf{Related VDML Value Exchanges}
+    & \begin{itemize}
+        \item Beta testers - Neighcorp
+        \item Third Party AI vendor - Neigcorp
+        \item Employees - Neighcorp
+        \item Outsourced development contractor - Neighcorp
+        \item 3rd Party authorized cosmetics creators on marketplace - Neighcorp
+        \item Game Forum - Neighcorp
+    \end{itemize} \\
+
+    \textbf{Supporting IT Architecture}
+    & Game Development is supported by databases for storing game-related data, servers for hosting and running game services, and ETL processes for transferring and transforming data. Business intelligence (BI) tools and the data warehouse can support analysis of game performance and player behaviour. Development tools and testing environments also support the creation, testing, and improvement of game content.\\
+
+\end{longtable}
 
 \printbibliography
    
-
-
-
-
 \end{document}
