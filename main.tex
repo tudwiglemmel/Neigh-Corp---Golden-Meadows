@@ -606,86 +606,210 @@ Now, the Closed Beta Testing is completed with making Golden Meadows available o
 After five months, all their feedback from the Game Vendors and the Game Forum is collected and sent to the developers by the Management. The developers evaluate the feedback, implement final changes if needed and finally Golden Meadows is published for all Players.
 
 \subsection{Relationships between Models}
-Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
+% Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
 
-\begin{itemize}
-\item How does the design of the processes help in fulfilling the goals of the company? 
-\item What are the relationships between the exchange and conversion processes and the EPC models? 
-\item What are the relationships between the EPC models and the VDML diagram?
-\end{itemize}
+% \begin{itemize}
+% \item How does the design of the processes help in fulfilling the goals of the company? 
+% \item What are the relationships between the exchange and conversion processes and the EPC models? 
+% \item What are the relationships between the EPC models and the VDML diagram?
+% \end{itemize}
 
-\begin{table}[H]
-    \caption{Relationships between the business process and goal models}
-    \label{tab:model-relationships}
-    \small
-    \begin{tabular}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{3cm}}
-        \toprule
-        & \textbf{EPC} & \textbf{Conversion} &
-        \textbf{Exchange} & \textbf{Goal model} \\
-        \midrule
-        \textbf{EPC}
-        & -- 
-        & Represents activities that support conversion processes
-        & Represents activities that support exchange processes
-        & Activities contribute to achieving company goals \\
-        \midrule
-        \textbf{Conversion}
-        & Implemented through relevant process activities
-        & --
-        & May depend on exchanged resources
-        & Supports goals through value creation \\
-        \midrule
-        \textbf{Exchange}
-        & Implemented through relevant process activities
-        & May provide resources needed for conversion
-        & --
-        & Supports goals through resource and value exchange \\
-        \midrule
-        \textbf{Goal model}
-        & Goals are supported by process activities
-        & Defines desired outcomes of conversion
-        & Defines desired outcomes of exchange
-        & -- \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[H]
+%     \caption{Relationships between the business process and goal models}
+%     \label{tab:model-relationships}
+%     \small
+%     \begin{tabular}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+%         \toprule
+%         & \textbf{EPC} & \textbf{Conversion} &
+%         \textbf{Exchange} & \textbf{Goal model} \\
+%         \midrule
+%         \textbf{EPC}
+%         & -- 
+%         & Represents activities that support conversion processes
+%         & Represents activities that support exchange processes
+%         & Activities contribute to achieving company goals \\
+%         \midrule
+%         \textbf{Conversion}
+%         & Implemented through relevant process activities
+%         & --
+%         & May depend on exchanged resources
+%         & Supports goals through value creation \\
+%         \midrule
+%         \textbf{Exchange}
+%         & Implemented through relevant process activities
+%         & May provide resources needed for conversion
+%         & --
+%         & Supports goals through resource and value exchange \\
+%         \midrule
+%         \textbf{Goal model}
+%         & Goals are supported by process activities
+%         & Defines desired outcomes of conversion
+%         & Defines desired outcomes of exchange
+%         & -- \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-\begin{table}[H]
-    \caption{Relationships between EPC models and the VDML diagram}
-    \label{tab:epc-vdml}
-    \begin{tabular}{p{3cm}p{4cm}p{6cm}}
-        \toprule
-        \textbf{EPC model} & \textbf{Corresponding VDML element}
-        & \textbf{Relationship} \\
-        \midrule
-        EPC activities
-        & Activities and capabilities
-        & EPC activities describe the process steps through which work is performed, while VDML can represent the capabilities and activities involved in delivering value. \\
-        \midrule
-        EPC events
-        & Business state or activity context
-        & EPC events describe conditions that trigger or result from process activities. The corresponding VDML representation depends on the elements included in the diagram. \\
-        \midrule
-        EPC functions
-        & Activities and roles
-        & EPC functions describe what is performed, while VDML can associate activities with roles and responsibilities. \\
-        \midrule
-        EPC process flow
-        & Value delivery and collaboration
-        & EPC illustrates the sequence and dependencies of process steps, while VDML can provide a broader view of how activities and participants contribute to value delivery. \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[H]
+%     \caption{Relationships between EPC models and the VDML diagram}
+%     \label{tab:epc-vdml}
+%     \begin{tabular}{p{3cm}p{4cm}p{6cm}}
+%         \toprule
+%         \textbf{EPC model} & \textbf{Corresponding VDML element}
+%         & \textbf{Relationship} \\
+%         \midrule
+%         EPC activities
+%         & Activities and capabilities
+%         & EPC activities describe the process steps through which work is performed, while VDML can represent the capabilities and activities involved in delivering value. \\
+%         \midrule
+%         EPC events
+%         & Business state or activity context
+%         & EPC events describe conditions that trigger or result from process activities. The corresponding VDML representation depends on the elements included in the diagram. \\
+%         \midrule
+%         EPC functions
+%         & Activities and roles
+%         & EPC functions describe what is performed, while VDML can associate activities with roles and responsibilities. \\
+%         \midrule
+%         EPC process flow
+%         & Value delivery and collaboration
+%         & EPC illustrates the sequence and dependencies of process steps, while VDML can provide a broader view of how activities and participants contribute to value delivery. \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-Table like this 
+% Table like this 
 
-Company goal
+% Company goal
 
-Supporting process
+% Supporting process
 
-Model evidence
+% Model evidence
 
-Contribution to the goal
+% Contribution to the goal
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{L{0.16\textwidth} L{0.26\textwidth} L{0.26\textwidth} L{0.26\textwidth}}
+    \caption{Traceability between EPC Models, REA Processes, and the VDML Diagram}
+    \label{tab:epc-rea-vdml} \\
+    \toprule
+    \textbf{EPC Process} & \textbf{Related REA Exchange Processes} & \textbf{Related REA Conversion Processes} & \textbf{Corresponding VDML Actors \& Value Propositions} \\
+    \midrule
+    \endfirsthead
+
+    \toprule
+    \textbf{EPC Process} & \textbf{Related REA Exchange Processes} & \textbf{Related REA Conversion Processes} & \textbf{Corresponding VDML Actors \& Value Propositions} \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{Sales Process} 
+    & \textbf{Premium Pass Exchange:} Operationalizes the \textit{Premium Pass Order} commitment, the \textit{Premium Pass Payment} (increment of Money), and the \textit{Premium Pass Assignment} (decrement of Premium Game Access). 
+    & \textbf{Brand Awareness Conversion:} Promotional activities and follow-up offers in the store utilize \textit{Brand Awareness} and \textit{High-Quality Game Content} to convert players into buyers. 
+    & \textbf{Actors:} Pay-to-Play Players, Payment Provider.\newline
+      \textbf{VPs:} Delivers \textit{Premium Game Access VP} to players in exchange for \textit{Money VP}; utilizes \textit{Payment Service VP} from the Payment Provider. \\
+    \midrule
+
+    \textbf{Procurement Process} 
+    & \textbf{Server Hosting, Insurance, Pentest, \& Game Dev Exchanges:} Handles the purchase requests, PO commitments, 3-way matching, and invoice settlement (\textit{Money} decrement) for external services and hardware. 
+    & \textbf{High-Quality Game Content \& Merch Conversions:} Acquires the \textit{Hardware}, \textit{Software}, \textit{Licenses}, and \textit{Printed Material} resources consumed or used in internal conversion events. 
+    & \textbf{Actors:} Server Provider, Outsourced Dev Contractor, Penetration Testers, Insurance Company, Third-Party AI Vendor.\newline
+      \textbf{VPs:} Exchanges \textit{Money VP} for \textit{Server Hosting VP}, \textit{Game Development VP}, \textit{Pen-Test Results VP}, \textit{Insurances VP}, and \textit{AI Services VP}. \\
+    \midrule
+
+    \textbf{Hiring Process} 
+    & \textbf{Labour Service Exchange:} Establishes the employment contract commitment through which employees provide \textit{Labour Service} (increment) in exchange for \textit{Money} (decrement). 
+    & \textbf{All Conversion Processes:} Supplies the \textit{Labour Service} resource consumed across \textit{Game Mechanics Development}, \textit{Designing Textures/Animations}, and \textit{Designing Motifs/Articles}. 
+    & \textbf{Actors:} Employees.\newline
+      \textbf{VPs:} Formalizes the exchange where Neigh Corp receives \textit{Labour VP} from Employees in return for \textit{Money VP}. \\
+    \midrule
+
+    \textbf{Beta Testing Process} 
+    & \textbf{Base Game Access Exchange:} Operationalizes providing early game copies/access (decrement) in exchange for tester feedback (increment) and monetary compensation for closed testers. 
+    & \textbf{High-Quality Game Content Conversion:} Developer evaluation of beta feedback directly drives the \textit{Game Mechanics Development} event to refine and produce \textit{High-Quality Game Content}. 
+    & \textbf{Actors:} Beta Testers, Free-to-Play Players, Game Vendor, Game Forum.\newline
+      \textbf{VPs:} Exchanges \textit{Early Access VP} and \textit{Base Game Access VP} for \textit{User Feedback VP} and \textit{Anticipation VP}. \\
+\end{longtable}
+}
+
+\subsubsection{How Process Design Fulfills Company Goals}
+\autoref{tab:goal-process-traceability} demonstrates how the designed REA and EPC processes directly contribute to fulfilling Neigh Corp's strategic goals and means from the Strategy Map (Section 3).
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{L{0.20\textwidth} L{0.22\textwidth} L{0.26\textwidth} L{0.26\textwidth}}
+    \caption{Contribution of Business Processes to Company Goals}
+    \label{tab:goal-process-traceability} \\
+    \toprule
+    \textbf{Company Goal} & \textbf{Supporting Process} & \textbf{Model Evidence} & \textbf{Contribution to the Goal} \\
+    \midrule
+    \endfirsthead
+
+    \toprule
+    \textbf{Company Goal} & \textbf{Supporting Process} & \textbf{Model Evidence} & \textbf{Contribution to the Goal} \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{Goal 1:} To profit from Golden Meadows \newline
+    \textbf{Goal 8:} To generate recurring revenue \newline
+    \textbf{Goal 4:} To get users to make payments inside of Golden Meadows
+    & \begin{itemize}
+        \item Sales Process (EPC)
+        \item Premium Pass Exchange (REA)
+        \item Procurement Process (EPC)
+    \end{itemize}
+    & \textbf{Sales EPC:} Includes automated ERP monthly subscription status checks, promotional/bundle offers, and a 2-day payment retry link.\newline
+      \textbf{Procurement EPC:} Enforces a SEK 50,000 managerial approval threshold and 3-way match.\newline
+      \textbf{Goal Model:} Implements Means 13, 15, and 17.
+    & Directly generates recurring revenue by automating monthly subscription renewals and recovering failed transactions via alternative payment links, while the Procurement process controls expenditure to protect profit margins. \\
+    \midrule
+
+    \textbf{Goal 2:} To make Golden Meadows enjoyable to play for the target market \newline
+    \textbf{Goal 7:} To ensure the same quality of game mechanics for all
+    & \begin{itemize}
+        \item Beta Testing Process (EPC)
+        \item High-Quality Game Content Conversion (REA)
+        \item Character Design Conversion (REA)
+    \end{itemize}
+    & \textbf{Beta Testing EPC:} Two-stage feedback loop (50 Closed Beta Testers under NDA + 100,000 Open Beta Players) evaluated by developers before release.\newline
+      \textbf{REA Conversions:} Consumes \textit{Labour Service} and \textit{Hardware} to create game mechanics, textures, and animations.\newline
+      \textbf{Goal Model:} Implements Means 1, 27--33, and 36.
+    & Ensures bugs and balancing issues are resolved prior to full launch and that core equestrian mechanics (breeding, genetics, competitions) and visuals meet target audience expectations. \\
+    \midrule
+
+    \textbf{Goal 3:} To gain a loyal community \newline
+    \textbf{Goal 5:} To get many horse-interested users to play \newline
+    \textbf{Goal 9:} Establish a strongly recognizable brand
+    & \begin{itemize}
+        \item Brand Awareness Conversion (REA)
+        \item Merch Design \& Merch Conversion (REA)
+        \item Base Game Access Exchange (REA)
+    \end{itemize}
+    & \textbf{REA Conversions:} Combines \textit{Selling Merch}, \textit{Publishing Game Content}, and \textit{Publishing Social Media Content} into \textit{Awareness Acquisition}.\newline
+      \textbf{Base Game Exchange:} Provides free access in exchange for user feedback.\newline
+      \textbf{Goal Model:} Implements Means 2, 3--9, and 26.
+    & Lowers the switching cost to zero via free-to-play access while building a recognizable niche identity through merchandise, social media presence, and early community involvement on Steam and the Game Forum. \\
+    \midrule
+
+    \textbf{Goal 10:} To have high long-term user retention \newline
+    \textbf{Goal 6:} To build a large player base
+    & \begin{itemize}
+        \item Sales Process (EPC)
+        \item Hiring Process (EPC)
+        \item Game Development Exchange (REA)
+    \end{itemize}
+    & \textbf{Sales EPC:} Captures post-purchase player feedback and logs cancellation reasons when subscriptions are not renewed.\newline
+      \textbf{Hiring EPC \& Game Dev Exchange:} Onboards internal staff and external contractors to maintain a steady pipeline of content.
+    & Analyzing cancellation reasons and player feedback allows Neigh Corp to address churn drivers, while continuous staffing and outsourced development ensure regular content updates that keep players engaged long-term. \\
+\end{longtable}
+}
 
 \section{IT Architecture Design}
 \begin{center}
@@ -873,10 +997,6 @@ However, not all evaluation points can be confirmed from the KPI definitions alo
 \section{Enterprise Architecture Evaluation}
 In other parts of the work, you have designed the organization from several perspectives: goals, processes, IT architecture, and so on. All of these combined converge towards an Enterprise Architecture (EA). A key component of EA is capability, an ability and capacity that enable an enterprise to achieve a business goal in a certain context. In this light, your task is to design one capability based on the models already created. The first step is to fill in the capability elicitation template in terms of relevant goals, KPIs, context, business process variants. This should be followed by a graphical design of a capability model, for instance, by introducing links between the newly developed capability and the corresponding constructs in other models.
 
-FILL IN CAPABILITY ELICITAION TEMPLATE
-
-ADD CAPABILITY MODEL DESIGN
-
 \renewcommand{\arraystretch}{1.4}
 \setlength{\LTpre}{0pt}
 \setlength{\LTpost}{0pt}
@@ -950,7 +1070,11 @@ ADD CAPABILITY MODEL DESIGN
     \textbf{Supporting IT Architecture}
     & Game Development is supported by databases for storing game-related data, servers for hosting and running game services, and ETL processes for transferring and transforming data. Business intelligence (BI) tools and the data warehouse can support analysis of game performance and player behaviour. Development tools and testing environments also support the creation, testing, and improvement of game content.\\
 
+    Lalala I'm a tiny butterfly lalal
+
 \end{longtable}
+
+
 
 \printbibliography
    
