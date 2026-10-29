@@ -3586,9 +3586,6 @@
         <mxCell id="w-lmv6JoQya-N5ZbpEKP-34" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
           <mxGeometry height="40" width="40" x="456.22" y="104.99999999999997" as="geometry" />
         </mxCell>
-        <mxCell id="w-lmv6JoQya-N5ZbpEKP-35" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;" value="1" vertex="1">
-          <mxGeometry x="39.99999999999929" y="348.0999999999998" as="geometry" />
-        </mxCell>
         <mxCell id="w-lmv6JoQya-N5ZbpEKP-36" edge="1" parent="1" source="w-lmv6JoQya-N5ZbpEKP-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=none;endFill=0;edgeStyle=orthogonalEdgeStyle;" target="w-lmv6JoQya-N5ZbpEKP-1" value="consume">
           <mxGeometry relative="1" x="-0.0271" y="2" as="geometry">
             <mxPoint as="offset" />
@@ -3629,7 +3626,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3Y4QKE7z009YmL9akff4-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=swimlane;fontStyle=0;startSize=40;childLayout=stackLayout;horizontal=1;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#82b366;" value="«Econ res»&lt;div&gt;&lt;b&gt;High-quality Game Content&lt;/b&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="170" width="140" x="46.22" y="207.10000000000022" as="geometry" />
+          <mxGeometry height="170" width="140" x="46.22" y="206.00000000000023" as="geometry" />
         </mxCell>
         <mxCell id="3Y4QKE7z009YmL9akff4-5" parent="3Y4QKE7z009YmL9akff4-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="contentId" vertex="1">
           <mxGeometry height="26" width="140" y="40" as="geometry" />
