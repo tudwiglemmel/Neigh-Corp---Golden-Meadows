@@ -14,10 +14,10 @@ jobs:
         run: rm -f IS1_Project_Report_Group_13.pdf
 
       - uses: xu-cheng/latex-action@v4
+        continue-on-error: true
         with:
           root_file: main.tex
           args: -pdf -file-line-error -interaction=nonstopmode -f
-          continue_on_error: true
 
       - name: Rename output
         run: mv main.pdf IS1_Project_Report_Group_13.pdf
