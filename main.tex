@@ -605,86 +605,14 @@ Now, the Closed Beta Testing is completed with making Golden Meadows available o
 After five months, all their feedback from the Game Vendors and the Game Forum is collected and sent to the developers by the Management. The developers evaluate the feedback, implement final changes if needed and finally Golden Meadows is published for all Players.
 
 \subsection{Relationships between Models}
-% Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
+Include one or several tables that visualize the relationships between the models introduced in this section and the models in the previous sections. The tables should help to answer the following questions: 
 
-% \begin{itemize}
-% \item How does the design of the processes help in fulfilling the goals of the company? 
-% \item What are the relationships between the exchange and conversion processes and the EPC models? 
-% \item What are the relationships between the EPC models and the VDML diagram?
-% \end{itemize}
+\begin{itemize}
+\item How does the design of the processes help in fulfilling the goals of the company? 
+\item What are the relationships between the exchange and conversion processes and the EPC models? 
+\item What are the relationships between the EPC models and the VDML diagram?
+\end{itemize}
 
-% \begin{table}[H]
-%     \caption{Relationships between the business process and goal models}
-%     \label{tab:model-relationships}
-%     \small
-%     \begin{tabular}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{3cm}}
-%         \toprule
-%         & \textbf{EPC} & \textbf{Conversion} &
-%         \textbf{Exchange} & \textbf{Goal model} \\
-%         \midrule
-%         \textbf{EPC}
-%         & -- 
-%         & Represents activities that support conversion processes
-%         & Represents activities that support exchange processes
-%         & Activities contribute to achieving company goals \\
-%         \midrule
-%         \textbf{Conversion}
-%         & Implemented through relevant process activities
-%         & --
-%         & May depend on exchanged resources
-%         & Supports goals through value creation \\
-%         \midrule
-%         \textbf{Exchange}
-%         & Implemented through relevant process activities
-%         & May provide resources needed for conversion
-%         & --
-%         & Supports goals through resource and value exchange \\
-%         \midrule
-%         \textbf{Goal model}
-%         & Goals are supported by process activities
-%         & Defines desired outcomes of conversion
-%         & Defines desired outcomes of exchange
-%         & -- \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
-
-% \begin{table}[H]
-%     \caption{Relationships between EPC models and the VDML diagram}
-%     \label{tab:epc-vdml}
-%     \begin{tabular}{p{3cm}p{4cm}p{6cm}}
-%         \toprule
-%         \textbf{EPC model} & \textbf{Corresponding VDML element}
-%         & \textbf{Relationship} \\
-%         \midrule
-%         EPC activities
-%         & Activities and capabilities
-%         & EPC activities describe the process steps through which work is performed, while VDML can represent the capabilities and activities involved in delivering value. \\
-%         \midrule
-%         EPC events
-%         & Business state or activity context
-%         & EPC events describe conditions that trigger or result from process activities. The corresponding VDML representation depends on the elements included in the diagram. \\
-%         \midrule
-%         EPC functions
-%         & Activities and roles
-%         & EPC functions describe what is performed, while VDML can associate activities with roles and responsibilities. \\
-%         \midrule
-%         EPC process flow
-%         & Value delivery and collaboration
-%         & EPC illustrates the sequence and dependencies of process steps, while VDML can provide a broader view of how activities and participants contribute to value delivery. \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
-
-% Table like this 
-
-% Company goal
-
-% Supporting process
-
-% Model evidence
-
-% Contribution to the goal
 
 {\footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -822,7 +750,19 @@ After five months, all their feedback from the Game Vendors and the Game Forum i
     \end{figure}
 \end{center}
 
-This section is to show the IT architecture of the company. The IT systems to be used in the company are to be specified, including BPMS, CRM, ERP, DW, BI tools, dashboard, and KM. The use of EAI and decision support systems (BI, DW and Dashboards) shall also be discussed. The IT architecture shall be documented graphically in a diagram showing the systems and the data flows between them, representing systems as nodes and data flows as labelled arrows. The relationships between the systems and the business processes they support shall be made explicit.
+% This section is to show the IT architecture of the company. The IT systems to be used in the company are to be specified, including BPMS, CRM, ERP, DW, BI tools, dashboard, and KM. The use of EAI and decision support systems (BI, DW and Dashboards) shall also be discussed. The IT architecture shall be documented graphically in a diagram showing the systems and the data flows between them, representing systems as nodes and data flows as labelled arrows. The relationships between the systems and the business processes they support shall be made explicit.
+
+\autoref{fig:IT_Architecture} shows the IT-architecture of Neigh Corp. Systems are represented as nodes and the relationships between them as arrows, with some arrows being bi-directional. The graph is generally divided into three sections: one for operational systems, one for development and integration and an analytical section.
+
+At the bottom of the graph there are the two systems: ETL and DataWarehouse. These are responsible for receiving raw data from the operational systems, ranging from CSM to HRM, aggregating these and storing them for future evaluation. The data warehouse stores current and historical data and aggregates these for the Dashboard node and BI Tools. In this case, the data warehouse is used for longer running measurements and KPIs, such as income within the last 12 months and whether break even is reached by year two, seen in \autoref{tab:kpis} below. On the other hand, the EAI system handles real time information and shorter term KPIs. The EAI outputs its data to real-time dashboards that developers monitor continuously. This real time updating lets them react quickly to outages and bugs and therefore minimize monetary loss.
+
+The systems feeding the ETL and EAI with data are the operational systems of the company, CSM, ERP, CRM and HRM. These are each interacted with by employees to fulfil their function. Among others, a system such as the CRM system is used for sales by the Sales department. This supports the process of selling the customer a premium pass, displayed in \autoref{fig:Sales_process} above. The CRM system is also connected to the Customer Support team so that these can use the customer database to provide assistance.
+In the operational layer there are also systems such as HRM which is used by HR to manage employees which, among others, supports the hiring process specified in \autoref{fig:Hiring_process}.
+
+The hosting of the game is split between two servers: the normal game servers for everyday players and the Beta Servers where new versions of the game are tested. These are used by players as the graph shows. These two servers are connected to a CI/CD pipeline that enables continuous deployment, and all three of these nodes are hosted on the Server providers hardware. T
+        %Crazy guy
+
+\newpage
 
 \section{Business Performance Management}
 This section is to introduce the key performance indicators (KPI) for measuring and analysing the business processes of the company. 
@@ -876,7 +816,7 @@ Golden Meadows income within last 12 months
 & $\geq$ 1\,000\,000\,000 USD income
 & ---
 & ERP, CRM
-& EAI \\
+& Data Warehouse \\
 
 Golden Meadows income break even
 & Lagging KPI
@@ -884,7 +824,7 @@ Golden Meadows income break even
 & Break even by end of year two
 & ---
 & ERP, CRM
-& EAI \\
+& Data Warehouse \\
 
 Time of attaining specific microtransaction count
 & Lagging KPI
@@ -1076,7 +1016,7 @@ In other parts of the work, you have designed the organization from several pers
     \includegraphics[width=\linewidth,
                      height=0.85\textheight,
                      keepaspectratio]{figures/IS1_Project_Capability_map-Page-1.pdf}
-        \caption{IT Architecture Diagram \textit{Neigh Corp}}
+        \caption{Capability Map}
         \label{fig:Capability Visualization}
     \end{figure}
 \end{center}
