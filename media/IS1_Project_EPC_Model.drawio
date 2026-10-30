@@ -878,7 +878,7 @@
         <mxCell id="Ydx48FfAcqYwmqi1O13a-29" edge="1" parent="1" source="Ydx48FfAcqYwmqi1O13a-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=8;endSize=8;" target="Ydx48FfAcqYwmqi1O13a-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Ydx48FfAcqYwmqi1O13a-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="record curn reason" vertex="1">
+        <mxCell id="Ydx48FfAcqYwmqi1O13a-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="record churn reason" vertex="1">
           <mxGeometry height="40" width="120" x="991.5" y="83" as="geometry" />
         </mxCell>
         <mxCell id="Ydx48FfAcqYwmqi1O13a-27" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Sales cycle closed" vertex="1">
