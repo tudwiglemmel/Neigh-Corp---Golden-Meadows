@@ -16,6 +16,7 @@ jobs:
       - uses: xu-cheng/latex-action@v4
         with:
           root_file: main.tex
+          args: -pdf -file-line-error -interaction=nonstopmode -f
 
       - name: Rename output
         run: mv main.pdf IS1_Project_Report_Group_13.pdf
