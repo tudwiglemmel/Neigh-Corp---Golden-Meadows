@@ -1,0 +1,26 @@
+name: Generate pdf report
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clear old output
+        run: rm -f IS1_Project_Report_Group_13.pdf
+
+      - uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+
+      - name: Rename output
+        run: mv main.pdf IS1_Project_Report_Group_13.pdf
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generated pdf report"
+          file_pattern: "IS1_Project_Report_Group_13.pdf"
