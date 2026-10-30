@@ -17,6 +17,7 @@ jobs:
         with:
           root_file: main.tex
           args: -pdf -file-line-error -interaction=nonstopmode -f
+          continue_on_error: true
 
       - name: Rename output
         run: mv main.pdf IS1_Project_Report_Group_13.pdf
