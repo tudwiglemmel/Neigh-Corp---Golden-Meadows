@@ -1286,11 +1286,6 @@
             <mxPoint x="395" y="274.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Jx9fOWwcea8GpYoWJift-85" connectable="0" parent="Jx9fOWwcea8GpYoWJift-84" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="provide" vertex="1">
-          <mxGeometry relative="1" x="-0.2914" y="-1" as="geometry">
-            <mxPoint x="-105" y="-138" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="Jx9fOWwcea8GpYoWJift-86" connectable="0" parent="Jx9fOWwcea8GpYoWJift-84" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
           <mxGeometry relative="1" x="0.8209" y="-1" as="geometry">
             <mxPoint as="offset" />
@@ -1332,7 +1327,7 @@
         </mxCell>
         <mxCell id="Jx9fOWwcea8GpYoWJift-92" connectable="0" parent="Jx9fOWwcea8GpYoWJift-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="provide" vertex="1">
           <mxGeometry relative="1" x="-0.2674" y="-1" as="geometry">
-            <mxPoint x="97" y="-150" as="offset" />
+            <mxPoint x="99" y="-228" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Jx9fOWwcea8GpYoWJift-93" connectable="0" parent="Jx9fOWwcea8GpYoWJift-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
@@ -1342,6 +1337,11 @@
         </mxCell>
         <mxCell id="Jx9fOWwcea8GpYoWJift-94" connectable="0" parent="Jx9fOWwcea8GpYoWJift-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
           <mxGeometry relative="1" x="-0.9397" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7uqVC2jjhdbl6aZlOz9-1" connectable="0" parent="Jx9fOWwcea8GpYoWJift-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="provide" vertex="1">
+          <mxGeometry relative="1" x="0.9815" y="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
