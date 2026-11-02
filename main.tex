@@ -31,11 +31,11 @@
 \rhead{\includegraphics[height=2cm]{logos_images_pdf/logo_company.pdf}}
 \renewcommand{\headrulewidth}{0pt}
 
-\includegraphics[width=0.99\textwidth]{logos_images_pdf/logo_game.pdf}
+
 
 
 \title{Neigh Corp - Golden Meadows}
-\author{Marlen Baumgart \and Rodions Busurovs \and Carmen Silberbach \and  Martin Kashapov \and  Ludwig Temmel \and  Ilyas Yildirim}
+\author{Marlen Baumgart \and Rodions Bušurovs \and Carmen Silberbach \and  Martin Kashapov \and  Ludwig Temmel \and  Ilyas Yildirim}
 
 \date{\today}
 
@@ -54,6 +54,9 @@
     }
 
 \begin{document}
+\includegraphics[width=0.99\textwidth]{logos_images_pdf/logo_game.pdf}
+
+
 \pagenumbering{gobble}   % suppress page numbers
     \maketitle
     \tableofcontents
@@ -77,6 +80,8 @@ The primary sources of income are a recurring premium membership subscription th
 This section is to show the value network in which the company will work. Agents, resources, and exchanges of resources are to be made explicit. Note that the project group here has to clarify exactly which products the company is to offer. Also note that the value network analysis has to take into account that the company is to work in different markets with different actors.
 
 \subsection{VDML Diagram}
+Include a VDML diagram here
+
 \begin{figure}[H]
     \hspace*{-4cm}
     \includegraphics[width=1.6\linewidth]{figures/IS1_Project_VDML-Diagram.pdf}
@@ -95,6 +100,8 @@ This section is to show the value network in which the company will work. Agents
 
 
 \subsection{VDML Diagram Explained}
+Include a textual description explaining the VDML diagram
+
 Seen above is the VDML diagram designed for Golden Meadows, featuring Neigh Corp as the central agent involved in the majority of value exchange processes. The diagram provides a comprehensive overview of the majority of actors involved in value propositions directly affecting the game.
 
 The inclusion of individual agents was decided based on the previously-designed goal model as well as the actors typically engaged in the game development as well as MMO game maintenance processes. Each of the identified agents' involvements in a value proposition is briefly described below, as well as the agent itself where its name is not self-explanatory.
@@ -212,14 +219,11 @@ The majority of value exchange relationships depicted on the VDML diagram includ
 \end{enumerate}
 
 
-
-
-
-
 \section{Goal Design}
 This section is to show the goals of the company. The goals shall be clearly related to the value network analysis in Section 1. In order to identify relevant goals, the project group shall make use of the five forces model and generic strategies of Michael Porter (see links on the page “Reading Resources” at the course web site). It is recommended that Strategy maps be used to structure the goal model (see link on the same page).
 
 \subsection{Goal Model}
+Include a graphical BMM goal model here
 
 \begin{figure}[H]
     \hspace*{-4cm}
@@ -229,6 +233,8 @@ This section is to show the goals of the company. The goals shall be clearly rel
 \end{figure}
 
 \subsection{Goal Model Explained}
+Include a textual description of the BMM model that explains it and shows how
+it is related to the components of the five forces model
 % Include a textual description of the BMM model that explains it and shows how it is related to the components of the five forces model.
 
 % \autoref{fig:Goal_model} shows the goal model for Neigh-corp. It describes the overarching goals, subgoals, influencers that affect these goals and the means that can help achieve them. The coloured border around the boxes in the diagram indicate which dimension of value creation in the company these belong to, in accordance with \cite{kaplan2004strategy}. Which colour corresponds to which level is shown in the diagram next to the legend. The levels shown in the diagram are ordered in accordance with the levels in the generic strategies, ranging from financial goals at the top to concrete technologies at the bottom. Influencers are modelled outside any perspective, as these can impact across several categories and are not influenced by the company.
@@ -320,6 +326,19 @@ In the "Customer" perspective, these specialised internal processes translate in
 This section is to show the processes of the company. The processes shall be clearly related to the value network analysis in Section 2 and the goal design in Section 3.
 
 \subsection{Exchange and Conversion Processes in REA}
+Include a graphical conceptual schema of the company with exchange and con-
+version processes (expressed as UML class diagrams) using the REA ontology.
+
+All classes including attributes must be named and the cardinality/multiplicity
+
+between the classes must be expressed. Stereotypes for all classes shall be spec-
+ified in accordance with REA. Note that only the exchange and conversion
+
+processes within the company shall be modelled, but not processes in other
+companies in the value network. The conceptual schema shall also make use of other relevant patterns than those for exchange and conversion processes, i.e.
+structural and behavioural patterns as defined in the book by Hruby. Provide
+textual descriptions for explaining the graphical schema.
+
 \subsubsection{Conversion Processes}
 % \begin{figure}[H]
 %     \centering
@@ -518,6 +537,12 @@ From Neigh Corp's perspective, the assignment is a decrement event because acces
 
 
 \subsection{Detailed Processes in EPC}
+
+Include a number of detailed process models, expressed as EPC diagrams. The
+processes should include sales and procurement. The process models should
+show actions of individual actors and handle alternatives and exceptions. It is
+recommended to make each process diagram small by using the decomposition
+mechanisms of EPC diagrams.
 
 \subsubsection{Sales Process}
 
@@ -739,6 +764,15 @@ Include one or several tables that visualize the relationships between the model
 }
 
 \section{IT Architecture Design}
+This section is to show the IT architecture of the company. The IT systems to
+be used in the company are to be specified, including BPMS, CRM, ERP, DW,
+BI tools, dashboard, and KM. The use of EAI and decision support systems
+(BI, DW and Dashboards) shall also be discussed. The IT architecture shall be
+documented graphically in a diagram showing the systems and the data flows
+between them, representing systems as nodes and data flows as labeled arrows.
+The relationships between the systems and the business processes they support
+shall be made explicit.
+
 \begin{center}
     \begin{figure}[H]
     \hspace*{-4cm}
@@ -754,13 +788,13 @@ Include one or several tables that visualize the relationships between the model
 
 \autoref{fig:IT_Architecture} shows the IT-architecture of Neigh Corp. Systems are represented as nodes and the relationships between them as arrows, with some arrows being bi-directional. The graph is generally divided into three sections: one for operational systems, one for development and integration and an analytical section.
 
-At the bottom of the graph there are the two systems: ETL and DataWarehouse. These are responsible for receiving raw data from the operational systems, ranging from CSM to HRM, aggregating these and storing them for future evaluation. The data warehouse stores current and historical data and aggregates these for the Dashboard node and BI Tools. In this case, the data warehouse is used for longer running measurements and KPIs, such as income within the last 12 months and whether break even is reached by year two, seen in \autoref{tab:kpis} below. On the other hand, the EAI system handles real time information and shorter term KPIs. The EAI outputs its data to real-time dashboards that developers monitor continuously. This real time updating lets them react quickly to outages and bugs and therefore minimize monetary loss.
+At the bottom of the graph there are the two systems: ETL and DataWarehouse. These are responsible for receiving raw data from the operational systems, aggregating these and storing them for future evaluation. The data warehouse stores current and historical data and aggregates these for the Dashboard node and BI Tools. In this case, the data warehouse is used for longer running measurements and KPIs, such as income within the last 12 months and whether break even is reached by year two, seen in \autoref{tab:kpis} below. On the other hand, the EAI system handles real time information and shorter term KPIs. The EAI outputs its data to real-time dashboards that developers monitor continuously for disruptions in the live systems, especially the ones facing the customer. This real time updating lets them react quickly to outages and and other incidents and therefore minimize monetary loss.
 
-The systems feeding the ETL and EAI with data are the operational systems of the company, CSM, ERP, CRM and HRM. These are each interacted with by employees to fulfil their function. Among others, a system such as the CRM system is used for sales by the Sales department. This supports the process of selling the customer a premium pass, displayed in \autoref{fig:Sales_process} above. The CRM system is also connected to the Customer Support team so that these can use the customer database to provide assistance.
+The systems on the bottom left feeding the ETL and EAI with data are the operational systems of the company, CSM, ERP, CRM and HRM. These are each interacted with by employees to fulfil their function. Among others, a system such as the CRM system is used for sales by the Sales department. This supports the process of selling the customer a premium pass, displayed in \autoref{fig:Sales_process} above. The CRM system is also connected to the Customer Support team so that these can use the customer database to provide assistance.
 In the operational layer there are also systems such as HRM which is used by HR to manage employees which, among others, supports the hiring process specified in \autoref{fig:Hiring_process}.
 
-The hosting of the game is split between two servers: the normal game servers for everyday players and the Beta Servers where new versions of the game are tested. These are used by players as the graph shows. These two servers are connected to a CI/CD pipeline that enables continuous deployment, and all three of these nodes are hosted on the Server providers hardware. T
-        %Crazy guy
+The hosting of the game is split between two servers: the normal game servers for everyday players and the Beta Servers where new versions of the game are tested. These are used by players as the graph shows. These two servers are connected to a CI/CD pipeline that enables continuous deployment, and all three of these nodes are hosted on the Server providers hardware. A project management, source code and documentation stack outside of the Developer services hosted in-house keeps the core development in the hands of the developers and in turn define and trigger scripts in the CI/CD pipeline for various processes like deploying temporary development stages, creating releases and deploying them. Both game servers supply the EAI with real time server data about the server health and the CI/CD pipeline does the same with the pipeline states, which can be accessed by the developers to react to issues on those systems quickly. At the same time the server provider collects metrics themselves and can inform the developers if there's major problems with the underlying infrastructure impacting their customers. Players interact mainly with game servers to play on, but some committed players would be selected as beta testers to play on a separate private beta server and test the next update a week or two early to catch obvious bugs and other issues with it. When they provide feedback through dedicated channels, developers can act on that before the update gets deployed on the game servers.
+
 
 \newpage
 
@@ -768,6 +802,16 @@ The hosting of the game is split between two servers: the normal game servers fo
 This section is to introduce the key performance indicators (KPI) for measuring and analysing the business processes of the company. 
 
 \subsection{Leading and Lagging KPIs}
+
+Include between five and ten leading and lagging indicators. Each indicator
+shall be described in an indicator template consisting of at least the following
+parts: name of the indicator, definition of the indicator, which goal(s) in the
+company’s goal model that the indicator is related to, target values, which
+part of a business process (i.e. which activity) the indicator measures, which
+IT system that will be the data source for the indicator, and which type of
+IT solution will feed the dashboard system with data from the source system.
+Ensure that the descriptions are consistent with the IT architecture in Section
+5.
 
 {\footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -885,7 +929,7 @@ Change in Steam rating within last month
 Very high Steam rating within a year
 & Lagging KPI
 & Objective 8, Goal 2
-& Highest rating
+& >= 70% positive reviews
 & ---
 & ERP
 & EAI \\
@@ -900,7 +944,7 @@ Each KPI is related to one or more company goals, specified with target values a
 
 \begin{itemize}
 
-\item \textbf{Golden Meadows income break even} - Lagging KPI related to Goal 1 (To profit from Golden Meadows) as well as Objective 6 (One billion dollars annual income 2 years after the release, or reach break even within 2 years). The only identified target value is to break even by end of year two, the related IT solution being EAI and the data sources identified being ERP & CRM. The measured business process is Beta Testing Process Model.
+\item \textbf{Golden Meadows income break even} - Lagging KPI related to Goal 1 (To profit from Golden Meadows) as well as Objective 6 (One billion dollars annual income 2 years after the release, or reach break even within 2 years). The only identified target value is to break even by end of year two, the related IT solution being Data Warehouse and the data sources identified being ERP \& CRM. The measured business process is Beta Testing Process Model.
 
 \item \textbf{Time of attaining specific microtransaction count} - Lagging KPI concerning Goal 4 and Objective 3 (To get users to make payments inside of Golden Meadows and to receive 4000 daily microtransactions by the end of year 1). The target value is derived from the objective and is simply to attain more than or exactly 4000 microtransactions no longer than one year after release. The same IT data sources are used as in the previous KPI, as well as the same IT solution.
 
@@ -908,20 +952,22 @@ Each KPI is related to one or more company goals, specified with target values a
 
 \item \textbf{Amount of monthly subscriptions} - Lagging KPI related only to goal 8 (To generate recurring revenue from the player), sharing the same data sources and the IT solution as the first two identified KPI's. Target value is 200000, i.e. the amount of subscribers.
 
-\item \textbf{Revenue generated by microtransactions monthly} - related goals 1 & 4 (To profit from Golden Meadows and To get users to make payments inside of Golden Meadows), also being lagging, having the target value of no less than 83 million USD. The same data sources and the IT solution are used as before.
+\item \textbf{Revenue generated by microtransactions monthly} - related goals 1 \& 4 (To profit from Golden Meadows and To get users to make payments inside of Golden Meadows), also being lagging, having the target value of no less than 83 million USD. The same data sources and the IT solution are used as before.
 
 \item \textbf{Maintain retention rate monthly} - Leading KPI related to the same goals as the previous KPI, only using CRM as its data source while also using EAI as the IT solution. Its target value is more than or equals to 90\%, representing retention rate. This KPI influences lagging KPI's related to revenue. 
 
-\item \textbf{Number of scheduled beta tests} - Leading KPI influencing \textit{Time of Beta Testing Completion}, data sources being source code, documentation, as well as project mangement. The target value is no more than 100 test sessions. The measured business process is Beta Testing Process while the IT solution is EAI. It relates to goal 7 (to ensure the same quality of game mechanics for all) and objective 7 (complete beta testing 1 month before release).
+\item \textbf{Number of scheduled beta tests} - Leading KPI influencing \textit{Time of Beta Testing Completion}, data sources being source code, documentation, as well as project management. The target value is at least 100 or more test sessions. The measured business process is Beta Testing Process while the IT solution is EAI. It relates to goal 7 (to ensure the same quality of game mechanics for all) and objective 7 (complete beta testing 1 month before release).
 
 \item \textbf{Change in Steam rating within last month} - Third leading KPI influencing \textit{Steam Follower Count}. Its target value is greater than mediocre/average rating, data source being ERP and IT solution being EAI. It relates to goal 2 (to make Golden Meadows enjoyable to play for the target market) as well as objective 8 (reach 4 out of 5 stars for Golden Meadows on Google Play 3 months after the release AND reach the "very positive" rating on steam within one year after release).
 
-\item \textbf{Very high Steam rating within a year} - Lagging KPI related to the same goal and objective as the previous one, its target value being "highest rating", data source and IT solutions also being identical to the ones used by the leading KPI above.
+\item \textbf{Very high Steam rating within a year} - Lagging KPI related to the same goal and objective as the previous one, its target value being "70\% positive reviews", data source and IT solutions also being identical to the ones used by the leading KPI above.
 \end{itemize}
 
 
-
 \subsection{Evaluation of KPIs}
+Include an evaluation of the KPIs from the previous subsection, based on the
+article by Eckerson.
+
 The provided KPIs in the previous section are aligned with the evaluation Eckerson proposes in "Performance Dashboards: Measuring, Monitoring, and Managing Your Business".
 
 The twelve evaluation points that are listed are aligned, owned, predictive, actionable, few, easy, balanced \& linked, trigger changes, standardized, context-driven, reinforced with incentives, and relevant.
@@ -1020,6 +1066,11 @@ In other parts of the work, you have designed the organization from several pers
         \label{fig:Capability Visualization}
     \end{figure}
 \end{center}
+
+\section{Final Project Review Report}
+Here is the Final Review Report from Group 46 concerning our project:\\
+
+
 
 \printbibliography
    
