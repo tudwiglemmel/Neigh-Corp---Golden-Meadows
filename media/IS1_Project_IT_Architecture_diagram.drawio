@@ -1054,6 +1054,12 @@
             <mxPoint x="-943" y="-860" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-1" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/people/Suit_Woman_Black_128x128.png;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-250" y="-1060" as="geometry" />
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-3" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/people/Worker_Woman_128x128.png;fontColor=#D8829D;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;b&gt;Business Intelligence&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="-270" y="-1060" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
