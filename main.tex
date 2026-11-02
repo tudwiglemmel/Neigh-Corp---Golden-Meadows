@@ -788,6 +788,29 @@ shall be made explicit.
 
 \autoref{fig:IT_Architecture} shows the IT-architecture of Neigh Corp. Systems are represented as nodes and the relationships between them as arrows, with some arrows being bi-directional. The graph is generally divided into three sections: one for operational systems, one for development and integration and an analytical section.
 
+The \autoref{tab:it-acronyms-explained} shows what each acronym in the table above stands for.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+        \toprule
+        \textbf{Acronym} & \textbf{Full name} \\
+        \midrule
+        CRM & Customer relationship management \\
+        CSM & Customer support management \\
+        ERP & Enterprise resource planning \\
+        HRM & Human resource management \\
+        EAI & Enterprise application integration \\
+        ETL & Extract, transform, load \\
+        BPM & Business Process Management \\
+        KM & Knowledge management \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{IT system acronyms}
+    \label{tab:it-acronyms-explained}
+\end{table}
+
 At the bottom of the graph there are the two systems: ETL and DataWarehouse. These are responsible for receiving raw data from the operational systems, aggregating these and storing them for future evaluation. The data warehouse stores current and historical data and aggregates these for the Dashboard node and BI Tools. In this case, the data warehouse is used for longer running measurements and KPIs, such as income within the last 12 months and whether break even is reached by year two, seen in \autoref{tab:kpis} below. On the other hand, the EAI system handles real time information and shorter term KPIs. The EAI outputs its data to real-time dashboards that developers monitor continuously for disruptions in the live systems, especially the ones facing the customer. This real time updating lets them react quickly to outages and and other incidents and therefore minimize monetary loss.
 
 The systems on the bottom left feeding the ETL and EAI with data are the operational systems of the company, CSM, ERP, CRM and HRM. These are each interacted with by employees to fulfil their function. Among others, a system such as the CRM system is used for sales by the Sales department. This supports the process of selling the customer a premium pass, displayed in \autoref{fig:Sales_process} above. The CRM system is also connected to the Customer Support team so that these can use the customer database to provide assistance.
