@@ -903,7 +903,7 @@
           <mxGeometry height="50" width="49.24" x="18.5" y="45.5" as="geometry" />
         </mxCell>
         <mxCell id="gNI4cGR7V3bLOhSKRLNH-84" connectable="0" parent="gNI4cGR7V3bLOhSKRLNH-1" style="group" value="" vertex="1">
-          <mxGeometry height="91" width="95.5" x="-452.25000000000006" y="-480" as="geometry" />
+          <mxGeometry height="91" width="95.5" x="-430.00000000000006" y="-485.5" as="geometry" />
         </mxCell>
         <mxCell id="gNI4cGR7V3bLOhSKRLNH-85" parent="gNI4cGR7V3bLOhSKRLNH-84" style="image;html=1;image=img/lib/clip_art/people/Worker_Woman_128x128.png;fontColor=#D8829D;" value="&lt;b&gt;Business Intelligence&lt;/b&gt;" vertex="1">
           <mxGeometry height="80" width="80" as="geometry" />
@@ -1069,6 +1069,23 @@
             </Array>
             <mxPoint x="-360" y="-837" as="sourcePoint" />
             <mxPoint x="-261" y="-1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-6" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/finance/Credit_Card_128x128.png;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-1740" y="-530" as="geometry" />
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-7" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/finance/Dollar_128x128.png;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-1720" y="-510" as="geometry" />
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-9" edge="1" parent="gNI4cGR7V3bLOhSKRLNH-1" source="gNI4cGR7V3bLOhSKRLNH-111" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D8829D;strokeWidth=3;opacity=60;opacityGroup=1;" target="4cizrDvHPwGL1JmATnh2-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1440" y="-650" as="sourcePoint" />
+            <mxPoint x="-1439" y="-589" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-10" connectable="0" parent="4cizrDvHPwGL1JmATnh2-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="use for payment" vertex="1">
+          <mxGeometry relative="1" x="-0.1806" y="-2" as="geometry">
+            <mxPoint x="8" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
