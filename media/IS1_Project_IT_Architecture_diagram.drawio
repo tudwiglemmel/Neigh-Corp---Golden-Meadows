@@ -631,7 +631,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="iOtlAS6ln6GtWcyWGOgn-18" connectable="0" parent="gNI4cGR7V3bLOhSKRLNH-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;queries &amp;amp; analyses&lt;/div&gt;&lt;div&gt;enterprise data&lt;/div&gt;" vertex="1">
-          <mxGeometry relative="1" x="0.1231" y="-1" as="geometry">
+          <mxGeometry relative="1" x="0.1285" y="-1" as="geometry">
             <mxPoint x="8" y="-27" as="offset" />
           </mxGeometry>
         </mxCell>
@@ -670,12 +670,6 @@
           <mxGeometry relative="1" x="0.5551" y="-7" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="-1350" y="-343" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="gNI4cGR7V3bLOhSKRLNH-22" edge="1" parent="gNI4cGR7V3bLOhSKRLNH-1" source="gNI4cGR7V3bLOhSKRLNH-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;opacity=60;opacityGroup=1;strokeColor=#D8829D;endArrow=none;endFill=0;startArrow=classic;startFill=1;" value="&lt;div&gt;analyse game and&lt;/div&gt;&lt;div&gt;&amp;nbsp;server performance&lt;/div&gt;">
-          <mxGeometry relative="1" x="0.2714" y="1" as="geometry">
-            <mxPoint y="1" as="offset" />
-            <mxPoint x="-488.25" y="-1000" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="gNI4cGR7V3bLOhSKRLNH-24" edge="1" parent="gNI4cGR7V3bLOhSKRLNH-1" source="gNI4cGR7V3bLOhSKRLNH-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;opacity=60;opacityGroup=1;strokeColor=#678D58;" target="gNI4cGR7V3bLOhSKRLNH-82">
@@ -798,7 +792,7 @@
             <mxPoint x="22" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gNI4cGR7V3bLOhSKRLNH-55" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/atlassian/Atlassian_Logo.svg;fontColor=#678D58;" value="&lt;b&gt;Source code,&lt;/b&gt;&lt;div&gt;&lt;b&gt;documentation&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&amp;amp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;project management&lt;/b&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="gNI4cGR7V3bLOhSKRLNH-55" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/atlassian/Atlassian_Logo.svg;fontColor=#678D58;" value="&lt;b&gt;BPM &amp;amp; KM Stack (Source code,&lt;/b&gt;&lt;div&gt;&lt;b&gt;documentation&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&amp;amp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;project management)&lt;/b&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="66" width="66" x="-887.17" y="-1020" as="geometry" />
         </mxCell>
         <mxCell id="gNI4cGR7V3bLOhSKRLNH-56" edge="1" parent="gNI4cGR7V3bLOhSKRLNH-1" source="gNI4cGR7V3bLOhSKRLNH-76" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#D8829D;strokeWidth=3;opacity=60;opacityGroup=1;" target="gNI4cGR7V3bLOhSKRLNH-46">
@@ -909,7 +903,7 @@
           <mxGeometry height="50" width="49.24" x="18.5" y="45.5" as="geometry" />
         </mxCell>
         <mxCell id="gNI4cGR7V3bLOhSKRLNH-84" connectable="0" parent="gNI4cGR7V3bLOhSKRLNH-1" style="group" value="" vertex="1">
-          <mxGeometry height="91" width="95.5" x="-416.73" y="-950" as="geometry" />
+          <mxGeometry height="91" width="95.5" x="-452.25000000000006" y="-480" as="geometry" />
         </mxCell>
         <mxCell id="gNI4cGR7V3bLOhSKRLNH-85" parent="gNI4cGR7V3bLOhSKRLNH-84" style="image;html=1;image=img/lib/clip_art/people/Worker_Woman_128x128.png;fontColor=#D8829D;" value="&lt;b&gt;Business Intelligence&lt;/b&gt;" vertex="1">
           <mxGeometry height="80" width="80" as="geometry" />
@@ -1054,11 +1048,28 @@
             <mxPoint x="-943" y="-860" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4cizrDvHPwGL1JmATnh2-1" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/people/Suit_Woman_Black_128x128.png;labelPerimeter=1;" value="" vertex="1">
-          <mxGeometry height="80" width="80" x="-250" y="-1060" as="geometry" />
+        <mxCell id="4cizrDvHPwGL1JmATnh2-3" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/people/Worker_Woman_128x128.png;fontColor=#D8829D;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;b&gt;Upper Management&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="-367.77" y="-1159" as="geometry" />
         </mxCell>
-        <mxCell id="4cizrDvHPwGL1JmATnh2-3" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/people/Worker_Woman_128x128.png;fontColor=#D8829D;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;b&gt;Business Intelligence&lt;/b&gt;" vertex="1">
-          <mxGeometry height="80" width="80" x="-270" y="-1060" as="geometry" />
+        <mxCell id="4cizrDvHPwGL1JmATnh2-1" parent="gNI4cGR7V3bLOhSKRLNH-1" style="image;html=1;image=img/lib/clip_art/people/Suit_Woman_Black_128x128.png;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-390" y="-1152" as="geometry" />
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-4" edge="1" parent="gNI4cGR7V3bLOhSKRLNH-1" source="gNI4cGR7V3bLOhSKRLNH-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;opacity=60;opacityGroup=1;strokeColor=#D8829D;endArrow=none;endFill=0;startArrow=classic;startFill=1;" target="4cizrDvHPwGL1JmATnh2-1" value="&lt;div&gt;Analyse and&amp;nbsp;&lt;/div&gt;&lt;div&gt;make business decision&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.2714" y="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <mxPoint x="-489.75" y="-750" as="sourcePoint" />
+            <mxPoint x="-490" y="-890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4cizrDvHPwGL1JmATnh2-5" edge="1" parent="gNI4cGR7V3bLOhSKRLNH-1" source="gNI4cGR7V3bLOhSKRLNH-55" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;opacity=60;opacityGroup=1;strokeColor=#D8829D;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" target="4cizrDvHPwGL1JmATnh2-1" value="Define business processes">
+          <mxGeometry relative="1" x="0.2714" y="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="-854.17" y="-1112" />
+            </Array>
+            <mxPoint x="-360" y="-837" as="sourcePoint" />
+            <mxPoint x="-261" y="-1030" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
